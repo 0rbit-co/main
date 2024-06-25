@@ -1,0 +1,215 @@
+import { Steps, Callout } from 'nextra/components'
+
+# News Feed
+
+In the tutorial, we will create an `ao` process that provides the latest News Feed. 
+
+## 🔑 Prerequisites
+
+- Understanding of the [ao](/concepts/what-is-ao) and [aos](/concepts/what-is-aos).
+- aos installed on your system.
+- Some $0RBT. _Learn how to get $0RBT [here](/protocol/token/how-to-get)_
+- Any Code Editor (VSCode, Sublime Text, etc)
+
+If you are ready with the above prerequisites, 
+
+## 🛠️ Let's Start Building 
+
+### Initialize the Project
+
+Create a new file named `0rbit-News-Feed.lua` in your project directory.
+
+```bash
+touch 0rbit-News-Feed.lua
+```
+### Initialize the Variables
+
+```lua
+local json = require("json")
+
+_0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"
+_0RBT_TOKEN = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
+
+URL = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
+FEE_AMOUNT = "1000000000000" -- 1 $0RBT
+NEWS = NEWS or {}
+```
+Breakdown of the above code:
+
+| Variable | Description |
+| --- | --- |
+| `json` | The module required to destruct the stringified JSON data. |
+| `_0RBIT` | The processId of the 0rbit process. |
+| `_0RBT_TOKEN` | The processId of the $0RBT process. |
+| `URL` | The API URL you want to fetch data from. |
+| `FEE_AMOUNT` | The amount of $0RBT you want to send to the 0rbit process for the request. |
+| `NEWS` | The table to store the news data. |
+
+<Callout type="info" emoji="ℹ️">
+    For more detailed information on how to use the JSON module, you can visit the documentation [JSON Module Documentation](https://cookbook_ao.arweave.dev/guides/aos/modules/json.html)
+</Callout>
+
+### Create functions
+
+#### Fetch News Function
+
+The `fetchNews` function fetches the news from the `URL` using 0rbit's `Get-Real-Data` handler.
+
+```lua
+function fetchNews()
+    Send({
+        Target = _0RBT_TOKEN,
+        Action = "Transfer",
+        Recipient = _0RBIT,
+        Quantity = FEE_AMOUNT,
+        ["X-Url"] = URL,
+        ["X-Action"] = "Get-Real-Data"
+    })
+    print(Colors.green .. "GET Request sent to the 0rbit process.")
+end
+```
+
+Breakdown of the above code:
+- `Send`: Transfer 1 $0RBT to the 0rbit process and make a GET request.
+
+#### Receive Data Function
+
+The `receiveData` function is called when the 0rbit process sends the fetched data to the process.
+
+```lua
+function receiveData(msg)
+    local res = json.decode(msg.Data);
+    local articles;
+    local article;
+    if res.status == "ok" then
+        articles = res.articles;
+        for k, v in pairs(articles) do
+            article =
+            {
+                title = v.title,
+                description = v.description,
+                url = v.url
+            }
+            table.insert(NEWS, article)
+        end
+        print("News Updated")
+    else
+        print("Error in fetching news")
+    end
+end
+```
+
+Breakdown of the above code:
+- `res`: Parse the JSON data received from the 0rbit process.
+- `articles`: To store the articles array.
+- `article`: To store the article object.
+- `if res.status == "ok"`: Check if the status is ok.
+
+    if true:
+        - `for k, v in pairs(articles)`: Iterate over the articles array.
+        - `article`: Create an article object with a title, description, and URL.
+        - `table.insert(NEWS, article)`: Insert the article object into the NEWS table.
+        - Print "News Updated".
+
+    if false:
+        - Print an error message.
+
+#### Get News Function
+
+The `getNews` function returns the news data from the `NEWS` table.
+
+```lua
+function getNews(msg)
+    local news = json.encode(NEWS)
+    Handlers.utils.reply(news)(msg)
+end
+```
+
+Breakdown of the above code:
+- `news`: Stringify the NEWS table.
+- `Handlers.utils.reply(news)`: Send the news data to the sender.
+
+### Create Handlers
+
+#### Get News Handler
+
+The `GetNews` handler is called when a process wants the latest news.
+
+```lua
+Handlers.add(
+    "GetNews",
+    Handlers.utils.hasMatchingTag("Action", "Get-News"),
+    getNews
+)
+```
+
+Breakdown of the above code:
+- __GetNews__: The name of the handler.
+- `Handlers.utils.hasMatchingTag("Action", "Get-News")`: Checks if the message action tag is `Get-News`.
+- `getNews`: The function that sends the latest news from the `NEWS` table.
+
+#### Fetch News Handler
+
+The `FetchNews` handler will fetch and update the latest news and update the `NEWS` table.
+
+```lua
+Handlers.add(
+    "FetchNews",
+    Handlers.utils.hasMatchingTag("Action", "Fetch-News"),
+    fetchNews
+)
+```
+
+Breakdown of the above code:
+- __FetchNews__: The name of the handler.
+- `Handlers.utils.hasMatchingTag("Action", "Fetch-News")`: Checks if the message action tag is `Fetch-News`
+- `fetchNews`: The function sends a GET Request to 0rbit process to fetch the latest news.
+
+#### Receive Data Handler
+The `ReceiveData` handler is called when the 0rbit process sends the fetched data to the process.
+
+```lua
+Handlers.add(
+    "ReceiveData",
+    Handlers.utils.hasMatchingTag("Action", "Receive-Response"),
+    receiveData
+)
+```
+Breakdown of the above code:
+- __ReceivingData__: The name of the handler.
+- `Handlers.utils.hasMatchingTag("Action", "Receive-Response")`: Checks if the message action tag is `Receive-Response`
+- `receiveData`: The function that updates the latest news in the `NEWS` table.
+
+## Run the Process
+
+<Steps>
+### Create a new process and load the script
+```bash
+aos 0rbitNewsFeed --load 0rbit-News-Feed.lua
+```
+The above command will create a new process with the name __0rbitNewsFeed__ and load `0rbit-News-Feed.lua` into it.
+
+### Fund your process 
+
+Transfer some $0RBT to your processID.
+
+### Fetch the Latest News
+
+```lua
+Send({ Target = ao.id, Action="Fetch-News"})
+```
+
+### Check the latest data
+
+```lua
+Send({ Target = ao.id, Action="Get-News"})
+```
+
+</Steps>
+
+---
+___Voila! You have successfully created a News Feed Process. 🎉___
+
+> You can find the complete code here:
+> 
+> https://github.com/0rbit-co/examples/blob/main/News-Feed.lua
