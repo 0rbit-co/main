@@ -5,7 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import ClientOnly from "./components/ClientOnly";
 import Footer from "./components/Footer";
 
-const googleAnalyticsMeasurementId: string =
+const googleAnalyticsMeasurementId: any =
   process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
 const headProp = () => {
