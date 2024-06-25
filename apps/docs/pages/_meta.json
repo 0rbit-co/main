@@ -1,0 +1,31 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "protocol": {
+    "title": "Protocol",
+    "type": "page"
+  },
+  "developer": {
+    "title": "Developer"
+  },
+  "node-operators": {
+    "title": "Node Operators",
+    "display": "hidden"
+  },
+  "concepts": {
+    "title": "Concepts",
+    "type": "page"
+  },
+  "learn-by-building": {
+    "title": "Learn by Building",
+    "type": "page"
+  }
+}
