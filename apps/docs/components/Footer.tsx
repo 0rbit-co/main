@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
 
-const event = ({ action, category, label }) => {
+const event = ({ action, category, label }: any) => {
   (window as any).gtag("event", action, {
     event_category: category,
     event_label: label,
@@ -59,7 +59,7 @@ const Footer = () => {
   );
 };
 
-const SocialLink = ({ href, children, label }) => {
+const SocialLink = ({ href, children, label }: any) => {
   return (
     <a
       href={href}
