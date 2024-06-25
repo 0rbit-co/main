@@ -1,0 +1,20 @@
+{
+    "index": {
+        "title": "Introduction"
+    },
+    "token": {
+        "title": "$0RBT"
+    },
+    "architecture": {
+        "title": "Architecture",
+        "display": "hidden"
+    },
+    "working": {
+        "title": "How it works",
+        "display": "hidden"
+    },
+    "staking": {
+        "title": "Staking",
+        "display": "hidden"
+    }
+}
