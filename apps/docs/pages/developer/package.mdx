@@ -1,0 +1,77 @@
+import { Callout, Cards, Card } from 'nextra/components'
+
+# 0rbit Package
+
+To improve the DevX while building with 0rbit, we have created an [APM package **"0rbit"**](https://apm.betteridea.dev/pkg?id=LYIFdyKZ0D1B2GBQlPGHnGyawCwQn_sXqBuhqJHKIPs).
+
+This package contains all the CONSTANTS required to interact with 0rbit and provides you with simpe functions to interact with the 0rbit.
+
+## Functions 
+
+| Function | Description |
+| --- | --- |
+| `sendGetRequest()` | Make a HTTP GET request to any valid URL. |
+| `sendPostRequest()` | Make a HTTP POST request to any valid URL. |
+| `receiveResponse()` | Receive the response of the request made. |
+| `getBalance()` | Get the balance of **0RBT POINTS** of your processId. |
+
+## Installation
+
+### Using APM
+
+1. Open your AOS and `laod` APM blueprint in to your process.
+
+    ```bash
+    .load-blueprint apm
+    ```
+2. Install the `0rbit` package.
+
+    ```bash
+    APM.install("0rbit")
+    ```
+
+### Import Module
+    
+```lua
+_0rbit = require("0rbit")
+```
+
+## Usage
+
+### Creating a GET Request
+
+```lua
+_0rbit.sendGetRequest(GET_URL)
+```
+- `GET_URL`: The URL to make a GET request.
+
+### Creating a POST Request
+
+```lua
+_0rbit.sendPostRequest(POST_URL, POST_BODY)
+```
+- `POST_URL`: The URL to make a POST request.
+- `POST_BODY`: The body to be sent in POST request.
+
+### Receiving Response and Executing a function
+    
+```lua
+_0rbit.receiveResponse(msg, onResponse)
+```
+- `msg`: The message to be received.
+- `onResponse` (optional): The function to be executed on response. If not provided, it will execute an empty function.
+
+### Checking $0RBT Balance 
+
+```lua
+_0rbit.getBalance(address)
+```
+- `address` (optional): The address of the processId. If not provided, it will take the process Id of the current process.
+
+### Example
+__Learn how to use the 0rbit package by following examples:__
+
+<Cards>
+  <Card  title="Package Examples" href="/developer/package/example" />
+</Cards>
+
