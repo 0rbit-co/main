@@ -7,5 +7,9 @@
     "----": {
         "type": "separator"
     },
-    "ao-tutorials": "Basic ao Tutorials"
+    "ao-tutorials": "Basic ao Tutorials",
+    "-----": {
+        "type": "separator"
+    },
+    "quests": "Quests"
 }
