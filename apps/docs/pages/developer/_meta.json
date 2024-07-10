@@ -1,7 +1,8 @@
 {
     "index": "Getting Started",
+    "handlers": "Handlers",
     "get-request": "GET Request",
     "post-request": "POST Request",
-    "package": "Package",
-    "quests": "Quests"
+    "responses": "Responses",
+    "package": "Package"
 }
