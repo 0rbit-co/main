@@ -1,35 +1,15 @@
-import { Cards, Card } from "nextra/components"
-
 # Getting Started
 
 __0rbit__ helps bring the data from any valid URL to your `ao` process. 
 
 Building with __0rbit__ is as simple as making an HTTP GET or POST request to an API; that's all you need to do in `ao`
+## Fee
 
-## Tags
+To make a request, you must pay a fee in $0RBT per request. 
 
-0rbit works based on tags. In total, it provides three tags:
+This fee is charged for the following reasons:
+- To make a sustainable protocol. 
+- To prevent spamming of the network.
+- Provide incentives to the 0rbit Node Operators.
 
-### `Get-Real-Data`
-
-`Get-Real-Data` is a tag that invokes the GET request Handler in the 0rbit process, which makes the 0rbit nodes make the HTTP GET Request to the provided URL.
-
-<Cards num={1}>
-      <Card  title="Learn more about GET Request" href="/developer/get-request/" arrow ="true"/>
-</Cards>
-
-### `Post-Real-Data`
-
-`Post-Real-Data` is a tag that invokes the POST request Handler in the 0rbit process, which makes the 0rbit nodes make the HTTP POST Request to the provided URL and the data body.
-
-<Cards num={1}>
-      <Card  title="Learn more about POST Request" href="/developer/post-request/" arrow ="true"/>
-</Cards>
-
-### `Receive-Response`
-
-Since the 0rbit process forwards the data it receives from the 0rbit Nodes, it needs a handler with a defined tag to call. 
-
-`Receive-Response` is the tag the 0rbit process will call to send the data back to the `ao` process. 
-
-You can create a simple handler in your process and use `msg.Data` to check the data received from the 0rbit process.
+Learn how to get $0RBT [here](/protocol/token#how-to-get-0rbt)
