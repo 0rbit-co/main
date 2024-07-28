@@ -30,6 +30,7 @@ const TeamPage = () => {
         {" "}
         <TeamCard
           pname="megabyte"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/megabyte.png"
           github="https://github.com/megabyte0x"
           twitter="https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09"
           info="Smart Contract Developer"
@@ -37,6 +38,7 @@ const TeamPage = () => {
         />
         <TeamCard
           pname="lucifer"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/lucifer.png"
           github="https://github.com/Lucifer0x17"
           twitter="https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09"
           info="Backend and Infrastructure"
@@ -51,6 +53,7 @@ const TeamPage = () => {
       >
         <TeamCard
           pname="manishi"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/manishi.png"
           dribble="https://dribbble.com/0xManishi"
           twitter="https://x.com/0xManishi?t=FKn7XBJwlIXwJR-f4KGkzw&s=09"
           info="Designer"
@@ -59,6 +62,7 @@ const TeamPage = () => {
         <div className="lg:block hidden place-self-center">
           <TeamCard
             pname="megabyte"
+            imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/megabyte.png"
             github="https://github.com/megabyte0x"
             twitter="https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09"
             info="Smart Contract Developer"
@@ -67,6 +71,7 @@ const TeamPage = () => {
         </div>
         <TeamCard
           pname="lilith"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/lilith.png"
           github="https://github.com/0xLPircy"
           twitter="https://x.com/0xLPircy?t=Ppkfa4HmoEsfPMEeYJCisw&s=09"
           info="Frontend Developer"
@@ -75,6 +80,7 @@ const TeamPage = () => {
         <div className="lg:block hidden place-self-center">
           <TeamCard
             pname="lucifer"
+            imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/lucifer.png"
             github="https://github.com/Lucifer0x17"
             twitter="https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09"
             info="Backend and Infrastructure"
@@ -83,6 +89,7 @@ const TeamPage = () => {
         </div>
         <TeamCard
           pname="sarthak"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/sarthak.png"
           github="https://github.com/Not-Sarthak"
           twitter="https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09"
           info="Frontend Developer"
@@ -98,6 +105,7 @@ const TeamPage = () => {
       >
         <TeamCard
           pname="manishi"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/manishi.png"
           dribble="https://dribbble.com/0xManishi"
           twitter="https://x.com/0xManishi?t=FKn7XBJwlIXwJR-f4KGkzw&s=09"
           info="Designer"
@@ -105,6 +113,7 @@ const TeamPage = () => {
         />
         <TeamCard
           pname="megabyte"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/megabyte.png"
           github="https://github.com/megabyte0x"
           twitter="https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09"
           info="Smart Contract Developer"
@@ -112,6 +121,7 @@ const TeamPage = () => {
         />
         <TeamCard
           pname="lilith"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/lilith.png"
           github="https://github.com/0xLPircy"
           twitter="https://x.com/0xLPircy?t=Ppkfa4HmoEsfPMEeYJCisw&s=09"
           info="Frontend Developer"
@@ -119,6 +129,7 @@ const TeamPage = () => {
         />
         <TeamCard
           pname="lucifer"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/lucifer.png"
           github="https://github.com/Lucifer0x17"
           twitter="https://x.com/Lucifer0x17?t=fH5LRms3xy2hSPLJbNubaA&s=09"
           info="Backend and Infrastructure"
@@ -126,6 +137,7 @@ const TeamPage = () => {
         />
         <TeamCard
           pname="sarthak"
+          imag = "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/team/sarthak.png"
           github="https://github.com/Not-Sarthak"
           twitter="https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09"
           info="Frontend Developer"

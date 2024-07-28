@@ -1,9 +1,5 @@
 
 import React, { useState, useEffect } from "react";
-import bark from "/companies/bark.svg";
-import betterIdea from "/companies/betterIdea.svg";
-import ao from "/companies/ao.svg";
-import arweave from "/companies/arweave.svg";
 
 const Companies: React.FC = () => {
   const [loaded, setLoaded] = useState<boolean>(false);
@@ -18,7 +14,7 @@ const Companies: React.FC = () => {
       <a href="https://ao.arweave.dev/"
       target="_blank">
         <img
-          src={ao}
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/companies/ao.svg"
           alt="AO"
           width={100}
           height={100}
@@ -30,7 +26,7 @@ const Companies: React.FC = () => {
       </a>
       <a href="https://www.arweave.org/" target="_blank">
         <img
-          src={arweave}
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/companies/arweave.svg"
           alt="Arweave"
           width={220}
           height={220}
@@ -41,7 +37,7 @@ const Companies: React.FC = () => {
       </a>
       <a href="https://ide.betteridea.dev/" target="_blank">
         <img
-          src={betterIdea}
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/companies/betterIdea.svg"
           alt="Better Idea"
           width={220}
           height={220}
@@ -52,7 +48,7 @@ const Companies: React.FC = () => {
       </a>
       <a href="https://bark.arweave.dev/" target="_blank">
         <img
-          src={bark}
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/companies/bark.svg"
           alt="Bark"
           width={100}
           height={100}

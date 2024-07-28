@@ -27,7 +27,7 @@ const ArchDiagram = () => {
     >
       <>
         <img
-          src="/arch/to1234.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to1234.svg"
           alt="req"
           width={30}
           height={30}
@@ -36,7 +36,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to1234.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to1234.svg"
           alt="req"
           width={30}
           height={30}
@@ -45,7 +45,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to1234.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to1234.svg"
           alt="req"
           width={30}
           height={30}
@@ -54,7 +54,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to1234.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to1234.svg"
           alt="req"
           width={30}
           height={30}
@@ -63,7 +63,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -72,7 +72,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -81,7 +81,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -90,7 +90,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/to5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/to5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -101,7 +101,7 @@ const ArchDiagram = () => {
       </>
       <>
         <img
-          src="/arch/from1.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from1.svg"
           alt="req"
           width={30}
           height={30}
@@ -110,7 +110,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from2.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from2.svg"
           alt="req"
           width={30}
           height={30}
@@ -119,7 +119,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from3.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from3.svg"
           alt="req"
           width={30}
           height={30}
@@ -128,7 +128,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from4.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from4.svg"
           alt="req"
           width={30}
           height={30}
@@ -137,7 +137,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -146,7 +146,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -155,7 +155,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -164,7 +164,7 @@ const ArchDiagram = () => {
           }`}
         />
         <img
-          src="/arch/from5678.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/from5678.svg"
           alt="req"
           width={30}
           height={30}
@@ -174,7 +174,7 @@ const ArchDiagram = () => {
         />
       </>
       <img
-        src="/arch/arch.svg"
+        src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/arch/arch.svg"
         alt="architechture"
         height={420}
         width={990}
@@ -185,8 +185,9 @@ const ArchDiagram = () => {
         height={90}
         width={90}
         className=""
-        src="/logos/sqLight.svg"
+        src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/sqLight.svg"
       />
+
     </div>
   );
 };

@@ -51,21 +51,21 @@ const Hero = () => {
           <h3 className="pb-[39px]">Scroll Down to Discover</h3>
           <div className="flex flex-col items-center justify-center arrowDiv">
             <img
-              src="/icons/arrowDown.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowDown.svg"
               alt="arrow"
               height={60}
               width={60}
               className=" arrow1"
             />
             <img
-              src="/icons/arrowDown.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowDown.svg"
               alt="arrow"
               height={60}
               width={60}
               className="my-[-12px] arrow2"
             />
             <img
-              src="/icons/arrowDown.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowDown.svg"
               alt="arrow"
               height={60}
               width={60}

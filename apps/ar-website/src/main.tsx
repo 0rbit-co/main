@@ -8,7 +8,7 @@ import Layout from './_components/_layout/index.tsx'
 import ScrollToTop from './_components/_layout/ScrollTop.tsx'
 import TeamPage from './_pages/TeamPage.tsx'
 import QuestsPage from './_pages/QuestsPage.tsx'
-
+// https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/
 const router = createHashRouter([
   {
     path: "/",

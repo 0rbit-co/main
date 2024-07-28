@@ -17,7 +17,7 @@ const not_found = () => {
               Go Home
             </button>
           </a>
-          <img src="/error/error.svg" width={600} height={600} alt="404" />
+          <img src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/error/error.svg" width={600} height={600} alt="404" />
         </div>
       </div>
       <div className="absolute bottom-0 w-full">

@@ -5,6 +5,7 @@ import { FaDribbble} from "react-icons/fa6";
 import {brandDarkBg,brandLightText } from "../../_utils/colors";
 interface TeamProps {
   pname: string;
+  imag: string;
   github?: string;
   dribble?: string;
   twitter: string;
@@ -18,7 +19,7 @@ const TeamCard: React.FC<TeamProps> = ({
   dribble,
   twitter,
   info,
-
+  imag
 }) => {
   return (
     <div
@@ -32,7 +33,7 @@ const TeamCard: React.FC<TeamProps> = ({
       `}
     >
       <img
-        src={`/team/${pname}.png`}
+        src={imag}
         height={150}
         width={150}
         alt={pname}
@@ -64,7 +65,7 @@ const TeamCard: React.FC<TeamProps> = ({
       <div className=" flex flex-row xl:gap-3 gap-[9px] md:pt-3 pt-[3px]">
         <a href={twitter} target="_blank">
           <img
-            src="/icons/twitterTeam.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/twitterTeam.svg"
             alt="x"
             height={30}
             width={30}
@@ -78,7 +79,7 @@ const TeamCard: React.FC<TeamProps> = ({
         {github && (
           <a href={github} target="_blank">
             <img
-              src="/icons/discTeam.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/discTeam.svg"
               alt="x"
               height={30}
               width={30}

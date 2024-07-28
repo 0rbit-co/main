@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ image, description, url }) => {
         xl:rounded-3xl xl:gap-3
         lg:rounded-2xl rounded-lg md:gap-[6px] gap-[3px] px-[0.6px] md:py-[6px] py-[3px]`}
         style={{
-          backgroundImage: `url('/cardbg.svg')`,
+          backgroundImage: `url('https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/cardbg.svg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

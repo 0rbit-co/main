@@ -70,7 +70,7 @@ const CardsContainerCustom = () => {
           mr-[120px] md:mr-[660px] xl:mr-[900px]`}
         >
           <img
-            src="/icons/arrowLeftSecondary.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowLeftSecondary.svg"
             alt="prev"
             height={15}
             width={15}
@@ -117,7 +117,7 @@ const CardsContainerCustom = () => {
           ml-[120px] md:ml-[660px] xl:ml-[900px]`}
         >
           <img
-            src="/icons/arrowRightSecondary.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowRightSecondary.svg"
             alt="next"
             height={15}
             width={15}

@@ -29,7 +29,7 @@ const CTABtn = () => {
           rounded-[12px] ${brandLightText} text-[12px] 
         hover:opacity-75 hover:tracking-wide hover:px-[21px] hover:cursor-pointer`}
           style={{
-            backgroundImage: `url('/ctabg.svg')`,
+            backgroundImage: `url('https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/ctabg.svg')`,
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
