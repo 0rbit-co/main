@@ -4,7 +4,7 @@ import {
 import { FaTwitter } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { FaDiscord } from "react-icons/fa";
-import arrDark from "/icons/linkArrow.svg";
+
 
 
 const event = ({ action, category, label, value }: any) => {
@@ -43,14 +43,14 @@ const Footer = () => {
           <img
             width={60}
             height={60}
-            src="/logos/recLight.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/recLight.svg"
             alt="logo"
             className="md:block hidden"
           />
           <img
             width={90}
             height={90}
-            src="/logos/recLight.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/recLight.svg"
             alt="logo"
             className="md:hidden w-[60px]"
           />
@@ -102,7 +102,7 @@ const Footer = () => {
             onClick={() => handleLinkClick("Docs", 4)}
           >
             <h4>Docs</h4>
-            <img width={8} height={8} src={arrDark} alt="arrow" />
+            <img width={8} height={8} src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/linkArrow.svg" alt="arrow" />
           </a>
           <a
             href="https://playground.0rbit.co/"
@@ -111,7 +111,7 @@ const Footer = () => {
             onClick={() => handleLinkClick("Playground", 5)}
           >
             <h4>Playground</h4>
-            <img width={8} height={8} src={arrDark} alt="arrow" />
+            <img width={8} height={8} src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/linkArrow.svg" alt="arrow" />
           </a>
           <a
             href="#"
@@ -119,7 +119,7 @@ const Footer = () => {
             onClick={() => handleLinkClick("Home", 6)}
           >
             <h4>Home</h4>
-            <img width={8} height={8} src={arrDark} alt="arrow" />
+            <img width={8} height={8} src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/linkArrow.svg" alt="arrow" />
           </a>
           <a
             href="#quests"
@@ -127,7 +127,7 @@ const Footer = () => {
             onClick={() => handleLinkClick("Quest", 7)}
           >
             <h4>Quest</h4>
-            <img width={8} height={8} src={arrDark} alt="arrow" />
+            <img width={8} height={8} src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/linkArrow.svg" alt="arrow" />
           </a>
           <a
             href="#team"
@@ -135,7 +135,7 @@ const Footer = () => {
             onClick={() => handleLinkClick("Team", 8)}
           >
             <h4>Team</h4>
-            <img width={8} height={8} src={arrDark} alt="arrow" />
+            <img width={8} height={8} src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/linkArrow.svg" alt="arrow" />
           </a>
         </div>
       </div>

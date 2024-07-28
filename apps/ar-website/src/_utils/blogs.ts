@@ -1,12 +1,8 @@
-import priceFeed from "/covers/priceFeedCover.svg";
-import newsFeed from "/covers/newsFeedCover.svg";
-import priceFeedFront from "/covers/priceFeedFrontCover.svg";
-import newsFeedFront from "/covers/newsFeedFrontCover.svg";
 
 export const blogData = [
   {
     id: 1,
-    image: priceFeed,
+    image: "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/covers/priceFeedCover.svg",
     title: "Price Feed Process",
     description:
       "Get the latest price data on your ao process.",
@@ -14,7 +10,7 @@ export const blogData = [
   },
   {
     id: 2,
-    image: newsFeed,
+    image: "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/covers/newsFeedCover.svg",
     title: "News Feed Process",
     description:
       "Get the latest news data on your ao process.",
@@ -22,7 +18,7 @@ export const blogData = [
   },
   {
     id: 3,
-    image: priceFeedFront,
+    image: "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/covers/priceFeedFrontCover.svg",
     title: "Price Feed Frontend",
     description:
       "Guide to building a frontend for your price feed process.",
@@ -30,7 +26,7 @@ export const blogData = [
   },
   {
     id: 4,
-    image: newsFeedFront,
+    image: "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/covers/newsFeedFrontCover.svg",
     title: "News Feed Frontend",
     description:
       "Guide to building a frontend for your news feed process.",

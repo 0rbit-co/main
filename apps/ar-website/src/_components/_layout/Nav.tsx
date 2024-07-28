@@ -47,14 +47,14 @@ const Nav = () => {
         })}>
           <img
             alt="logo"
-            src="/logos/recLight.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/recLight.svg"
             height={90}
             width={150}
             className={`md:w-[120px] md:h-[54px] w-[90px] h-[45px] md:block hidden`}
           />
           <img
             alt="logo"
-            src={`/logos/${isOpen ? "recDark" : "recLight"}.svg`}
+            src={`${isOpen ? "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/recDark.svg" : "https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/logos/recLight.svg"}`}
             height={90}
             width={150}
             className={`md:w-[120px] md:h-[54px] w-[90px] h-[45px] md:hidden block`}
@@ -67,7 +67,7 @@ const Nav = () => {
           >
             <img
               alt="arrleft"
-              src="/icons/arrowLeft.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowLeft.svg"
               height={12}
               width={12}
               className="rl sm:w-[15px] sm:h-[15px] w-[12px] h-[12px]"
@@ -141,7 +141,7 @@ const Nav = () => {
           >
             <img
               alt="arrleft"
-              src="/icons/arrowLeft.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrowLeft.svg"
               height={12}
               width={12}
               className="rl"

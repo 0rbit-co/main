@@ -6,7 +6,7 @@ const Features = () => {
     <div
       className="flex flex-col items-center justify-center text-center
       max-w-[1800px] w-[100vw] md:h-[75vh] min-h-full relative md:rounded-sm
-       from-[#25291C] via-[#25291C] to-[#45512B] md:bg-[url('/feat/bg.svg')] bg-[url('/feat/bgSm.svg')]"
+       from-[#25291C] via-[#25291C] to-[#45512B] md:bg-[url('https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/bg.svg')] bg-[url('https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/bgSm.svg')]"
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -17,7 +17,7 @@ const Features = () => {
       w-full max-w-[1440px]"
       >
         <img
-          src="/feat/circle.svg"
+          src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/circle.svg"
           alt="features"
           height={330}
           width={330}
@@ -44,7 +44,7 @@ const Features = () => {
             </h3>
             <img
               alt="qwer"
-              src="/feat/data.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/data.svg"
               height={30}
               width={30}
               className="md:w-[30px] md:h-[30px] w-[15px] h-[15px]"
@@ -77,7 +77,7 @@ const Features = () => {
             </h3>
             <img
               alt="qwer"
-              src="/feat/permissionless.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/permissionless.svg"
               height={21}
               width={21}
               className="md:w-[21px] md:h-[21px] w-[15px] h-[15px]"
@@ -108,7 +108,7 @@ const Features = () => {
             </h3>
             <img
               alt="qwer"
-              src="/feat/decentralized.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/decentralized.svg"
               height={39}
               width={39}
               className="md:w-[39px] md:h-[39px] w-[18px] h-[18px]"
@@ -139,7 +139,7 @@ const Features = () => {
             </h3>
             <img
               alt="qwer"
-              src="/feat/secure.svg"
+              src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/feat/secure.svg"
               height={24}
               width={24}
               className="md:w-[24px] md:h-[24px] w-[15px] h-[15px]"

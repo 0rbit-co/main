@@ -37,7 +37,7 @@ const QuestCard: React.FC<QuestProps> = ({
         `}
       >
         <img
-          src={`/quests/${imag}.svg`}
+          src={imag}
           alt={qname}
           width={120}
           height={120}
@@ -79,7 +79,7 @@ const QuestCard: React.FC<QuestProps> = ({
           <img
             width={8}
             height={8}
-            src="/icons/arrSecondary.svg"
+            src="https://gfv7gmd2lhlcbm3hfxv4f6k4xhf325ibxo67juh3b2hnoakhfvoq.arweave.net/MWvzMHpZ1iCzZy3rwvlcucu9dQG7vfTQ-w6O1wFHLV0/icons/arrSecondary.svg"
             alt="arrow"
           />
         </a>
