@@ -59,7 +59,7 @@ const headProp = () => {
 
 const config: DocsThemeConfig = {
   primaryHue: 37,
-  docsRepositoryBase: "https://github.com/0rbit-co/docs/blob/main",
+  docsRepositoryBase: "https://github.com/0rbit-co/main/blob/bc6d25c1bcfd2939451a94e764e815c833003810/apps/docs",
   useNextSeoProps() {
     const { asPath } = useRouter();
     let _titleTemplate: string =
