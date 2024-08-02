@@ -41,15 +41,7 @@ const PriceFeed = () => {
         {/* <Image src="/warn.jpg" alt="" height={30} width={30} /> */}
         <h2>
           Make sure the Process ID displayed on the right has atleast 1{" "}
-          <span className=" font-[Regular]">$0RBT</span>. You can swap{" "}
-          <span className=" font-[Regular]">$0RBT</span> on{" "}
-          <a
-            href="https://app.permaswap.network/AOCRED-0RBT"
-            className="underline hover:underline-offset-[3px]"
-          >
-            Permaswap here
-          </a>
-          . Learn how to add <span className=" font-[Regular]">$0RBT</span> to
+          <span className=" font-[Regular]">$0RBT</span>. Learn how to add <span className=" font-[Regular]">$0RBT</span> to
           your wallet{" "}
           <a
             href="https://docs.0rbit.co/protocol/token/add-to-wallet"
