@@ -9,11 +9,11 @@ import {
 import "../../_styles/anims.css";
 
 const Stats: React.FC = () => {
-  const [counter, setCounter] = useState<number>(70000);
+  const [counter, setCounter] = useState<number>(250000);
   useEffect(() => {
     const fetchCounter = async () => {
       setTimeout(() => {
-        setCounter(70000);
+        setCounter(250000);
       }, 1000);
     };
 
