@@ -11,6 +11,7 @@ import decentraMind from "../../../public/companies/decentraMind.svg";
 import community from "../../../public/companies/community-labs.svg";
 import onairos from "../../../public/companies/onairos.svg";
 import typr from "../../../public/companies/typr.svg";
+import astro from "../../../public/companies/astro.svg";
 
 const Companies: React.FC = () => {
   const logos = [
@@ -41,6 +42,7 @@ const Companies: React.FC = () => {
     { src: community, alt: "logo_community", width: 140, height: 140 },
     { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
     { src: typr, alt: "logo_typr", width: 72, height: 72 },
+    { src: astro, alt: "astro", width: 100, height: 100 },
   ];
 
   return (
