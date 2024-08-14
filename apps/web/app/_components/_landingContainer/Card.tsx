@@ -53,7 +53,7 @@ const Card: React.FC<CardProps> = ({ image, title, description, url }) => {
         >
           {description.slice(0, 154)}...
         </p>
-        <a href={url}>
+        <a href={url} target="_blank">
         <div
           className={`lg:text-[12px] md:text-[10.5px] text-[6px] text-center ${brandSecondaryText} font-normal 
         flex items-center justify-center gap-[1px] pt-2 hover:underline pb-[3px]`}

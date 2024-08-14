@@ -40,7 +40,7 @@ const Nav = () => {
           isOpen ? "h-[100vh] bg-[#25291ca4] z-50 " : "h-[9vh] bg-[#e3e5dee5]"
         }`}
       >
-        <a href="#" className="hover:cursor-pointer" onClick={() => event({
+        <a href="#" target="_blank" className="hover:cursor-pointer" onClick={() => event({
           action: 'click_logo',
           category: 'Navigation',
           label: 'Logo Click',

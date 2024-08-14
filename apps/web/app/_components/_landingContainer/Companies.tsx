@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import bark from "../../../public/companies/bark.svg";
 import betterIdea from "../../../public/companies/betterIdea.svg";
 import ao from "../../../public/companies/ao.svg";
 import arweave from "../../../public/companies/arweave.svg";
@@ -15,34 +15,15 @@ import astro from "../../../public/companies/astro.svg";
 
 const Companies: React.FC = () => {
   const logos = [
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: astro, alt: "astro", width: 100, height: 100 },
+    { src: arweave, alt: "logo_echo", width: 140, height: 140, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 56, height: 56, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 140, height: 140, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 140, height: 140, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 100, height: 100, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 140, height: 140, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 140, height: 140, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 72, height: 72, href: "https://www.typr.day/" },
   ];
 
   return (
@@ -64,13 +45,14 @@ const Companies: React.FC = () => {
             style={{ width: `calc(200% + ${logos.length * 56}px)` }}
           >
             {[...logos, ...logos].map((logo, index) => (
-              <Image
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-              />
+              <Link key={index} href={logo.href} passHref>
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                  />
+              </Link>
             ))}
           </motion.div>
         </div>
