@@ -16,5 +16,8 @@
     "staking": {
         "title": "Staking",
         "display": "hidden"
+    },
+    "links": {
+        "title": "Official Links"
     }
 }
