@@ -84,7 +84,7 @@ export default function RootLayout({
         className={`${raleway.className} min-h-[100vh] ${brandLightBg} flex flex-col items-center`}
       >
         {" "}
-        <Nav />
+        {/* <Nav /> */}
         {children}
       </body>
     </html>

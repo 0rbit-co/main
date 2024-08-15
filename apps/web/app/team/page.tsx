@@ -1,9 +1,12 @@
 import React from "react";
 import { Footer, TeamCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
+import Nav from "../_components/_layout/Nav";
 
 const TeamPage = () => {
   return (
+    <>
+    <Nav />
     <main
       className={`min-w-[100vw] lg:min-h-[93vh] min-h-[100vh] max-w-[1800px]
       flex flex-col items-center md:justify-center justify-between ${brandDarkText} 
@@ -132,6 +135,7 @@ const TeamPage = () => {
       </div>
       <Footer />
     </main>
+    </>
   );
 };
 

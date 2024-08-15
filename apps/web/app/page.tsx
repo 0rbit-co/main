@@ -63,6 +63,7 @@ import {
   Features,
   Footer,
   Hero,
+  Nav,
   Stats,
   VideoContainer,
 } from "./_components";
@@ -77,7 +78,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2700);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -87,6 +88,8 @@ export default function Home() {
   }
 
   return (
+    <>
+    <Nav />
     <main
       className={`flex flex-col items-center justify-between 
       ${brandLightBg} ${brandDarkText} w-full justify-center`}
@@ -113,5 +116,6 @@ export default function Home() {
         <Footer />
       </div>
     </main>
+    </>
   );
 }

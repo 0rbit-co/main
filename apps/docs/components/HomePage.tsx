@@ -211,9 +211,9 @@ const cards = [
     link: "/node-operators",
   },
   {
-    title: "Explore All",
+    title: "Official Links",
     imag: "node.svg",
-    text: "Be a part of the 0rbit Network",
-    link: "/concepts/what-is-arweave",
+    text: "Get all the official links at one place",
+    link: "/protocol/links",
   },
 ];
