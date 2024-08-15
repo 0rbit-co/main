@@ -45,7 +45,7 @@ const Companies: React.FC = () => {
             style={{ width: `calc(200% + ${logos.length * 56}px)` }}
           >
             {[...logos, ...logos].map((logo, index) => (
-              <Link key={index} href={logo.href} passHref>
+              <Link key={index} href={logo.href} passHref target="_blank">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
