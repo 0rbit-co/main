@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Loader = () => {
   return (
-    <div className="flex items-center justify-center h-screen w-screen pl-20">
-        <Image src={loader} alt="Loading..." width={200} height={200} />
+    <div className="flex items-center justify-center h-screen w-screen pl-20 pt-20">
+        <Image src={loader} alt="Loading..." width={120} height={120} />
     </div>
   );
 };
