@@ -99,6 +99,7 @@ const Nav = () => {
             </button>
           </Link>
           <Link
+          target="_blank"
             href="https://docs.0rbit.co/"
             className={`${brandDarkText} ${brandDarkBorder} border-[1px] 
             w-full text-center sm:px-[18px] py-[2px] px-[9px]  sm:bg-none bg-[#E3E5DE] backdrop-blur-[3px]
