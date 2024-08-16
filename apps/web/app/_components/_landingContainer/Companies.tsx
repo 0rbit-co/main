@@ -28,9 +28,10 @@ const Companies: React.FC = () => {
 
   return (
     <section className="flex lg:gap-12 py-3 pb-20 px-4 md:px-0 items-center justify-center">
-        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] w-[300px] lg:w-[1200px]">
+        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] 
+        w-[300px] xs:w-[510px] md:w-[750px] lg:w-[900px] xl:w-[1200px]">
           <motion.div
-            className="flex gap-14 flex-none items-center justify-center"
+            className="flex md:gap-12 xs:gap-6 gap-3 flex-none items-center justify-center"
             animate={{
               x: ["0%", "-100%"],
             }}
