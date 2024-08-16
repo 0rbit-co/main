@@ -77,7 +77,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false);
+      setLoading(true);
     }, 3000);
 
     return () => clearTimeout(timer);
