@@ -29,26 +29,26 @@ touch 0rbit-Post-Request.lua
 local json = require("json")
 
 _0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"
-_0RBT_TOKEN = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
+_0RBT_POINTS = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
 
 FEE_AMOUNT = "1000000000000" -- 1 $0RBT
-BASE_URL = "https://g8way.0rbit.co/graphql"
+BASE_URL = "https://arweave.dev/graphql"
 -- The data body to be sent in the POST request
 BODY = json.encode({
-                        query = [[
-                            query {
-                                transactions(
-                                    owners: ["vh-NTHVvlKZqRxc8LyyTNok65yQ55a_PJ1zWLb9G2JI"]
-                                ) {
-                                    edges {
-                                        node {
-                                            id
-                                        }
-                                    }
-                                }
-                            }
-                        ]]
-                    });
+    query = [[
+        query {
+            transactions(
+                owners: ["vh-NTHVvlKZqRxc8LyyTNok65yQ55a_PJ1zWLb9G2JI"]
+            ) {
+                edges {
+                    node {
+                        id
+                    }
+                }
+            }
+        }
+    ]]
+});
 
 ReceivedData = ReceivedData or {}
 ``` 

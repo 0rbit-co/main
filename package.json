@@ -5,7 +5,15 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:web": "cd apps/web && yarn dev",
+    "dev:ar-website": "cd apps/ar-website && yarn dev",
+    "dev:docs": "cd apps/docs && yarn dev",
+    "dev:playground": "cd apps/playground && yarn dev",
+    "build:web": "cd apps/web && yarn build",
+    "build:ar-website": "cd apps/ar-website && yarn build",
+    "build:docs": "cd apps/docs && yarn build",
+    "build:playground": "cd apps/playground && yarn build"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

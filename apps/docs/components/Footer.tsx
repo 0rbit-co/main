@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
+import { RiTwitterXLine } from "react-icons/ri";
 
 const event = ({ action, category, label }: any) => {
   (window as any).gtag("event", action, {
@@ -30,13 +31,13 @@ const Footer = () => {
           </div>
           <div className="mt-4 md:mt-0 md:ml-4 flex items-center">
             <SocialLink href="https://twitter.com/0rbitco" label="Twitter">
-              <FaTwitter />
+              <RiTwitterXLine />
             </SocialLink>
             <SocialLink href="https://discord.gg/JVSjqaKJgV" label="Discord">
-              <FaDiscord />
+              <FaDiscord className="w-10"/>
             </SocialLink>
             <SocialLink href="https://github.com/0rbit-co/" label="Github">
-              <FaGithub />
+              <FaGithub className=""/>
             </SocialLink>
           </div>
         </div>

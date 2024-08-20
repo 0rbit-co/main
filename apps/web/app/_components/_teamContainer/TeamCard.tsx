@@ -66,7 +66,7 @@ const TeamCard: React.FC<TeamProps> = ({
         {info}
       </h4>
       <div className=" flex flex-row xl:gap-3 gap-[9px] md:pt-3 pt-[3px]">
-        <Link href={twitter}>
+        <Link target="_blank" href={twitter}>
           <Image
             src="/icons/twitterTeam.svg"
             alt="x"
@@ -80,7 +80,7 @@ const TeamCard: React.FC<TeamProps> = ({
           />
         </Link>
         {github && (
-          <Link href={github}>
+          <Link target="_blank"href={github}>
             <Image
               src="/icons/discTeam.svg"
               alt="x"
@@ -93,7 +93,7 @@ const TeamCard: React.FC<TeamProps> = ({
           </Link>
         )}
         {dribble && (
-          <Link href={dribble}>
+          <Link target="_blank" href={dribble}>
             <FaDribbble
               className={`${brandLightText} hover:opacity-75 hover:scale-90 hover:cursor-pointer 
               xl:w-[15px] xl:h-[15px]

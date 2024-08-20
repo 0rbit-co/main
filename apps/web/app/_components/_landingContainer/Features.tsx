@@ -2,6 +2,7 @@ import React from "react";
 import { brandLightText } from "../../_utils/colors";
 import Image from "next/image";
 import "@/app/_styles/anims.css";
+import Sphere from "../Sphere";
 
 const Features = () => {
   return (
@@ -18,7 +19,7 @@ const Features = () => {
         className="fadeInFeatScroll flex flex-col items-center justify-center text-center gap-6 overflow-hidden 
       w-full max-w-[1440px]"
       >
-        <Image
+        {/* <Image
           src="/feat/circle.svg"
           alt="features"
           height={330}
@@ -27,7 +28,8 @@ const Features = () => {
           lg:w-[240px] lg:h-[240px] 
           md:w-[180px] md:h-[180px] 
           w-[180px] h-[180px] rotating"
-        />
+        /> */}
+        <Sphere />
         <div
           className="feat1 flex flex-col md:gap-[0px] gap-[3px] text-start items-start justify-start absolute
         lg:max-w-[240px] md:max-w-[210px] max-w-[105px]"

@@ -172,3 +172,17 @@ html {
     margin-right: 5px;
   }
 }
+
+
+@keyframes rotateSphere {
+  0% {
+    transform: rotateX(-45deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotatex(-45deg) rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(-45deg) rotateY(360deg);
+  }
+}
+
