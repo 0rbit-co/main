@@ -10,7 +10,11 @@ import {
 import HeroR from "./HeroR";
 import HeroL from "./HeroL";
 
-const Hero = () => {
+interface HeroProps {
+  handleScroll: () => void; // The callback function has no parameters and no return value
+}
+
+const Hero: React.FC<HeroProps> = ({handleScroll}) => {
   return (
     <section className="flex flex-row items-center justify-center h-screen lg:w-full w-full max-w-[99vw] overflow-hidden">
       <div className="pb-48 lg:pb-20">
@@ -48,7 +52,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col mt-8 absolute bottom-10 items-center justify-center font-light tracking-widest">
+        <div onClick={handleScroll} className="flex flex-col mt-8 absolute bottom-10 items-center justify-center font-light tracking-widest hover:cursor-pointer">
           <h3 className="pb-[39px]">Scroll Down to Discover</h3>
           <div className="flex flex-col items-center justify-center arrowDiv">
             <Image

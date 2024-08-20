@@ -56,7 +56,7 @@
 
 
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Architechture,
   Companies,
@@ -74,6 +74,7 @@ import Loader from "./_components/Loader";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const archRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -87,6 +88,11 @@ export default function Home() {
     return <Loader />;
   }
 
+  const handleScroll = () => {
+      archRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
   return (
     <>
     <Nav />
@@ -95,9 +101,9 @@ export default function Home() {
       ${brandLightBg} ${brandDarkText} w-full justify-center`}
     >
       <section className="snap h-screen flex flex-col items-center justify-center pt-6 w-full">
-        <Hero />
+        <Hero handleScroll={handleScroll}/>
       </section>
-      <section className="snap h-screen flex flex-col items-center justify-center md:pt-9 md:py-0 pb-12 pt-6">
+      <section ref={archRef} id="arch" className="snap h-screen flex flex-col items-center justify-center md:pt-9 md:py-0 pb-12 pt-6">
         <Architechture />
         <CTABtn />
       </section>
