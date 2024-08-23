@@ -34,7 +34,7 @@ const TeamPage = () => {
           pname="megabyte"
           github="https://github.com/megabyte0x"
           twitter="https://x.com/megabyte0x?t=WZYKcJAvN-CM7a6yU4lPNQ&s=09"
-          info="Smart Contract Developer"
+          info="DevRel"
           last={false}
         />
         <TeamCard
