@@ -9,8 +9,9 @@ const TeamPage = () => {
     <Nav />
     <main
       className={`min-w-[100vw] lg:min-h-[93vh] min-h-[100vh] max-w-[1800px]
-      flex flex-col items-center md:justify-center justify-between ${brandDarkText} 
-      sm:px-[18px] px-[12px] pt-[9vh] lg:pb-[30px]`}
+      flex flex-col items-center md:justify-center justify-center ${brandDarkText} 
+      sm:px-[18px] px-[12px] pt-[9vh] 
+      lg:pb-[30px]`}
     >
       <h1
         className="uppercase tracking-wider font-medium leading-[51px]
@@ -66,13 +67,13 @@ const TeamPage = () => {
             last={false}
           />
         </div>
-        <TeamCard
+        {/* <TeamCard
           pname="lilith"
           github="https://github.com/0xLPircy"
           twitter="https://x.com/0xLPircy?t=Ppkfa4HmoEsfPMEeYJCisw&s=09"
           info="Frontend Developer"
           last={false}
-        />
+        /> */}
         <div className="lg:block hidden place-self-center">
           <TeamCard
             pname="lucifer"
@@ -111,13 +112,13 @@ const TeamPage = () => {
           info="Smart Contract Developer"
           last={false}
         />
-        <TeamCard
+        {/* <TeamCard
           pname="lilith"
           github="https://github.com/0xLPircy"
           twitter="https://x.com/0xLPircy?t=Ppkfa4HmoEsfPMEeYJCisw&s=09"
           info="Frontend Developer"
           last={false}
-        />
+        /> */}
         <TeamCard
           pname="lucifer"
           github="https://github.com/Lucifer0x17"
@@ -133,7 +134,7 @@ const TeamPage = () => {
           last={true}
         />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
     </>
   );
