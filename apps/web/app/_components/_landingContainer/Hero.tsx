@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({handleScroll}) => {
           <h2 className="md:text-[27px] md:leading-[36px] sm:leading-[27px] sm:text-[27px] text-[21px] leading-[21px] mt-6 lg:mb-0 mb-12 tracking-widest">
             Get Access to Real World Data
           </h2>
-          <div className="flex sm:flex-row flex-col sm:gap-6 gap-6 lg:gap-3 items-center justify-between sm:text-[18px] text-[15px] py-[28px]">
+          <div className="flex sm:flex-row flex-col sm:gap-6 gap-[9px] lg:gap-3 items-center justify-between sm:text-[18px] text-[15px] py-[28px]">
             <a
               target="_blank"
               href="https://playground.0rbit.co/"
