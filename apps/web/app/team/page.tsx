@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, TeamCard } from "../_components";
+import { TeamCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
 import Nav from "../_components/_layout/Nav";
 

@@ -1,6 +1,5 @@
 import {
   brandDarkBg,
-  brandDarkText,
   brandLightText,
 } from "@/app/_utils/colors";
 import Image from "next/image";

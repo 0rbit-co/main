@@ -173,7 +173,7 @@ html {
   }
 }
 
-
+/* REMOVE THIS 
 @keyframes rotateSphere {
   0% {
     transform: rotateX(-45deg) rotateY(0deg);
@@ -184,5 +184,5 @@ html {
   100% {
     transform: rotateX(-45deg) rotateY(360deg);
   }
-}
+} */
 

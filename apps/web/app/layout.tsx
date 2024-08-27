@@ -62,7 +62,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://www.0rbit.co/logos/ogLogo.jpg"
+          content="https://www.0rbit.co/logos/ogBanner.jpeg"
         />
         <Script
           strategy="lazyOnload"

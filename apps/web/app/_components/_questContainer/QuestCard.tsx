@@ -1,7 +1,6 @@
 import {
   brandDarkBg,
   brandDarkBorder,
-  brandDarkText,
   brandLightBg,
   brandLightText,
   brandSecondaryText,
