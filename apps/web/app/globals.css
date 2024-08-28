@@ -134,7 +134,7 @@ html {
   }
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 1024px) {
   .teamWave:nth-child(odd) {
     margin-top: 90px;
   }
@@ -173,7 +173,7 @@ html {
   }
 }
 
-
+/* REMOVE THIS 
 @keyframes rotateSphere {
   0% {
     transform: rotateX(-45deg) rotateY(0deg);
@@ -184,5 +184,5 @@ html {
   100% {
     transform: rotateX(-45deg) rotateY(360deg);
   }
-}
+} */
 

@@ -1,6 +1,5 @@
 import {
   brandDarkBg,
-  brandDarkText,
   brandLightText,
 } from "@/app/_utils/colors";
 import Image from "next/image";
@@ -27,7 +26,7 @@ const TeamCard: React.FC<TeamProps> = ({
   return (
     <div
       className={`teamWave text-center flex flex-col justify-start items-center
-      md:w-[100%] rounded-full ${brandDarkBg} ${brandLightText} w-fit h-fit min-h-full max-h-fit
+      md:w-[100%] rounded-full ${brandDarkBg} ${brandLightText} w-fit h-fit max-h-fit
       xl:gap-[6px] lg:gap-[3px] gap-[6px]
       xl:pt-3 xl:pb-[30px] xl:px-3 
       lg:pt-[9px] lg:pb-[18px] lg:px-[9px]

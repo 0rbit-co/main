@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useState} from "react";
-import { Footer, QuestCard } from "../_components";
+import { QuestCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
 import { completedQuests, quests } from "../_utils/quests";
 import Nav from "../_components/_layout/Nav";
