@@ -1,8 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import {
-  brandDarkBg,
   brandLightText,
   brandSecondaryBg,
   brandSecondaryBorder,
@@ -10,7 +7,11 @@ import {
 import HeroR from "./HeroR";
 import HeroL from "./HeroL";
 
-const Hero = () => {
+interface HeroProps {
+  handleScroll: () => void; // The callback function has no parameters and no return value
+}
+
+const Hero: React.FC<HeroProps> = ({handleScroll}) => {
   return (
     <section className="flex flex-row items-center justify-center h-screen lg:w-full w-full max-w-[99vw] overflow-hidden">
       <div className="pb-48 lg:pb-20">
@@ -29,9 +30,9 @@ const Hero = () => {
             on Arweave
           </h1>
           <h2 className="md:text-[27px] md:leading-[36px] sm:leading-[27px] sm:text-[27px] text-[21px] leading-[21px] mt-6 lg:mb-0 mb-12 tracking-widest">
-            Get ACCESS to LIMITLESS DATA
+            Get Access to Real World Data
           </h2>
-          <div className="flex sm:flex-row flex-col sm:gap-6 gap-6 lg:gap-3 items-center justify-between sm:text-[18px] text-[15px] py-[28px]">
+          <div className="flex sm:flex-row flex-col sm:gap-6 gap-[9px] lg:gap-3 items-center justify-between sm:text-[18px] text-[15px] py-[28px]">
             <a
               target="_blank"
               href="https://playground.0rbit.co/"
@@ -48,7 +49,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col mt-8 absolute bottom-10 items-center justify-center font-light tracking-widest">
+        <div onClick={handleScroll} className="flex flex-col mt-8 absolute bottom-10 items-center justify-center font-light tracking-widest hover:cursor-pointer">
           <h3 className="pb-[39px]">Scroll Down to Discover</h3>
           <div className="flex flex-col items-center justify-center arrowDiv">
             <Image

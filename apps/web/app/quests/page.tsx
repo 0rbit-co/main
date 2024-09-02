@@ -1,9 +1,10 @@
 "use client";
 
 import React, {useState} from "react";
-import { Footer, QuestCard } from "../_components";
+import { QuestCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
 import { completedQuests, quests } from "../_utils/quests";
+import Nav from "../_components/_layout/Nav";
 
 const QuestsPage = () => {
   const [activeTab, setActiveTab] = useState("active");
@@ -14,6 +15,7 @@ const QuestsPage = () => {
 
   return (
     <div>
+      <Nav />
     <main
       className={`min-w-[100vw] max-w-[1800px] flex flex-col items-center justify-center ${brandDarkText} 
       sm:px-[18px] px-[12px] pt-[10vh] min-h-[93vh] lg:pb-[30px]`}

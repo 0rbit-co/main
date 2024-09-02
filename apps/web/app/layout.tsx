@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
-import { Footer, Nav } from "./_components";
 import { brandLightBg } from "./_utils/colors";
 import Script from "next/script";
 const raleway = Raleway({
@@ -9,7 +8,6 @@ const raleway = Raleway({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "0rbit | Oracle on Arweave",
@@ -64,7 +62,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://www.0rbit.co/logos/ogLogo.jpg"
+          content="https://www.0rbit.co/logos/ogBanner.jpeg"
         />
         <Script
           strategy="lazyOnload"
@@ -84,7 +82,7 @@ export default function RootLayout({
         className={`${raleway.className} min-h-[100vh] ${brandLightBg} flex flex-col items-center`}
       >
         {" "}
-        <Nav />
+        {/* <Nav /> */}
         {children}
       </body>
     </html>

@@ -19,6 +19,7 @@ const CTABtn = () => {
         category: 'CTA',
         label: 'Check the Docs',
       })}
+      target="_blank"
     >
       <div
         className="fadeInCTAScroll bg-[linear-gradient(0deg,_#9aa083,_#25291C)] p-[0.9px]

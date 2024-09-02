@@ -1,6 +1,5 @@
 import {
   brandDarkBg,
-  brandDarkText,
   brandLightText,
 } from "@/app/_utils/colors";
 import Image from "next/image";
@@ -27,7 +26,7 @@ const TeamCard: React.FC<TeamProps> = ({
   return (
     <div
       className={`teamWave text-center flex flex-col justify-start items-center
-      md:w-[100%] rounded-full ${brandDarkBg} ${brandLightText} w-fit h-fit min-h-full max-h-fit
+      md:w-[100%] rounded-full ${brandDarkBg} ${brandLightText} w-fit h-fit max-h-fit
       xl:gap-[6px] lg:gap-[3px] gap-[6px]
       xl:pt-3 xl:pb-[30px] xl:px-3 
       lg:pt-[9px] lg:pb-[18px] lg:px-[9px]
@@ -66,7 +65,7 @@ const TeamCard: React.FC<TeamProps> = ({
         {info}
       </h4>
       <div className=" flex flex-row xl:gap-3 gap-[9px] md:pt-3 pt-[3px]">
-        <Link href={twitter}>
+        <Link target="_blank" href={twitter}>
           <Image
             src="/icons/twitterTeam.svg"
             alt="x"
@@ -80,7 +79,7 @@ const TeamCard: React.FC<TeamProps> = ({
           />
         </Link>
         {github && (
-          <Link href={github}>
+          <Link target="_blank"href={github}>
             <Image
               src="/icons/discTeam.svg"
               alt="x"
@@ -93,7 +92,7 @@ const TeamCard: React.FC<TeamProps> = ({
           </Link>
         )}
         {dribble && (
-          <Link href={dribble}>
+          <Link target="_blank" href={dribble}>
             <FaDribbble
               className={`${brandLightText} hover:opacity-75 hover:scale-90 hover:cursor-pointer 
               xl:w-[15px] xl:h-[15px]

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import bark from "../../../public/companies/bark.svg";
 import betterIdea from "../../../public/companies/betterIdea.svg";
 import ao from "../../../public/companies/ao.svg";
 import arweave from "../../../public/companies/arweave.svg";
@@ -15,41 +15,68 @@ import astro from "../../../public/companies/astro.svg";
 
 const Companies: React.FC = () => {
   const logos = [
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: bark, alt: "logo_acme", width: 56, height: 56 },
-    { src: betterIdea, alt: "logo_apex", width: 140, height: 140 },
-    { src: ao, alt: "logo_celestial", width: 56, height: 56 },
-    { src: arweave, alt: "logo_echo", width: 140, height: 140 },
-    { src: outcome, alt: "logo_pulse", width: 140, height: 140 },
-    { src: decentraMind, alt: "logo_quantum", width: 140, height: 140 },
-    { src: community, alt: "logo_community", width: 140, height: 140 },
-    { src: onairos, alt: "logo_onairos", width: 140, height: 140 },
-    { src: typr, alt: "logo_typr", width: 72, height: 72 },
-    { src: astro, alt: "astro", width: 100, height: 100 },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
+    { src: arweave, alt: "logo_echo", width: 340, height: 340, href: "https://www.arweave.org/" },
+    { src: ao, alt: "logo_celestial", width: 106, height: 106, href: "https://ao.arweave.dev/" },
+    { src: community, alt: "logo_community", width: 240, height: 240, href: "https://www.communitylabs.com/" },
+    { src: outcome, alt: "logo_pulse", width: 240, height: 240, href: "https://www.outcome.gg/" },
+    { src: astro, alt: "astro", width: 130, height: 130, href: "https://www.astrousd.com/" },
+    { src: onairos, alt: "logo_onairos", width: 240, height: 240, href: "https://onairos.uk/" },
+    { src: decentraMind, alt: "logo_quantum", width: 240, height: 240, href: "https://x.com/decentramindio?lang=en" },
+    { src: betterIdea, alt: "logo_apex", width: 240, height: 240, href: "https://betteridea.dev/" },
+    { src: typr, alt: "logo_typr", width: 142, height: 142, href: "https://www.typr.day/" },
   ];
 
   return (
     <section className="flex lg:gap-12 py-3 pb-20 px-4 md:px-0 items-center justify-center">
-        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] w-[300px] lg:w-[1200px]">
+        <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)] 
+        w-[300px] xs:w-[510px] md:w-[750px] lg:w-[900px] xl:w-[1200px]">
           <motion.div
-            className="flex gap-14 flex-none items-center justify-center"
+            className="flex md:gap-12 xs:gap-6 gap-3 flex-none items-center justify-center"
             animate={{
               x: ["0%", "-100%"],
             }}
@@ -57,20 +84,21 @@ const Companies: React.FC = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: logos.length * 5,
+                duration: logos.length * 10,
                 ease: "linear",
               },
             }}
-            style={{ width: `calc(200% + ${logos.length * 56}px)` }}
+            style={{ width: `calc(200% + ${logos.length * 256}px)` }}
           >
             {[...logos, ...logos].map((logo, index) => (
-              <Image
-                key={index}
-                src={logo.src}
-                alt={logo.alt}
-                width={logo.width}
-                height={logo.height}
-              />
+              <Link key={index} href={logo.href} passHref target="_blank">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                  />
+              </Link>
             ))}
           </motion.div>
         </div>

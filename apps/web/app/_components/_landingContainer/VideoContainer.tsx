@@ -2,11 +2,8 @@
 import {
   brandDarkBg,
   brandDarkText,
-  brandLightBg,
-  brandLightText,
   brandSecondaryText,
 } from "@/app/_utils/colors";
-import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const VideoContainer = () => {

@@ -12,7 +12,7 @@ const not_found = () => {
             <div>We’re sorry , the page you are </div>
             <div>looking for does’nt exist.</div>
           </div>
-          <a href="/">
+          <a href="/" target="_blank">
             <button className="text-white bg-[#2E3421] px-4 py-1 rounded-full font-semibold">
               Go Home
             </button>

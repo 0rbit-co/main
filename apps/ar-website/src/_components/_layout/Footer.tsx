@@ -39,7 +39,7 @@ const Footer = () => {
    }
  `}
     >
-      <a href="#" className="flex flex-col lg:flex-row items-center justify-center md:justify-end md:items-end md:gap-[9px]">
+      <a href="#" className="flex flex-col lg:flex-row items-center justify-center md:justify-end md:items-end md:gap-[9px]" target="_blank">
           <img
             width={60}
             height={60}

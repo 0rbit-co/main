@@ -64,6 +64,7 @@ const Footer = () => {
       </div>
       <div className="flex md:hidden flex-row md:gap-6 gap-5 items-center justify-center mt-1 md:mt-0">
         <Link
+        target="_blank"
           href="https://twitter.com/0rbitco"
           onClick={() => handleLinkClick("Twitter", 1)}
         >
@@ -72,6 +73,7 @@ const Footer = () => {
           />
         </Link>
         <Link
+        target="_blank"
           href="https://discord.gg/JVSjqaKJgV"
           onClick={() => handleLinkClick("Discord", 2)}
         >
@@ -80,6 +82,7 @@ const Footer = () => {
           />
         </Link>
         <Link
+        target="_blank"
           href="https://github.com/0rbit-co"
           onClick={() => handleLinkClick("GitHub", 3)}
         >
@@ -94,6 +97,7 @@ const Footer = () => {
       md:text-[15px] text-[12px]"
         >
           <Link
+          target="_blank"
             href="https://docs.0rbit.co/"
             className={`flex flex-row gap-[3px] text-md hover:text-[#EB8F44] hover:tracking-wider hover:underline`}
             onClick={() => handleLinkClick("Docs", 4)}
@@ -102,6 +106,7 @@ const Footer = () => {
             <Image width={8} height={8} src={arrDark} alt="arrow" />
           </Link>
           <Link
+          target="_blank"
             href="https://playground.0rbit.co/"
             className={`flex flex-row gap-[3px] text-md hover:text-[#EB8F44] hover:tracking-wider hover:underline`}
             onClick={() => handleLinkClick("Playground", 5)}
@@ -137,6 +142,7 @@ const Footer = () => {
       </div>
       <div className="md:flex hidden flex-row md:gap-6 gap-[6px] items-center justify-center">
         <Link
+        target="_blank"
           href="https://twitter.com/0rbitco"
           onClick={() => handleLinkClick("Twitter", 9)}
         >
@@ -145,6 +151,7 @@ const Footer = () => {
           />
         </Link>
         <Link
+        target="_blank"
           href="https://discord.gg/JVSjqaKJgV"
           onClick={() => handleLinkClick("Discord", 10)}
         >
@@ -153,6 +160,7 @@ const Footer = () => {
           />
         </Link>
         <Link
+        target="_blank"
           href="https://github.com/0rbit-co"
           onClick={() => handleLinkClick("GitHub", 11)}
         >

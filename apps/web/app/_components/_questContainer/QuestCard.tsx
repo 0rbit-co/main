@@ -1,7 +1,6 @@
 import {
   brandDarkBg,
   brandDarkBorder,
-  brandDarkText,
   brandLightBg,
   brandLightText,
   brandSecondaryText,
@@ -74,6 +73,7 @@ const QuestCard: React.FC<QuestProps> = ({
         className={`${brandSecondaryText} flex flex-row gap-1 items-center justify-center`}
       >
         <Link
+        target="_blank"
           href={repo}
           className="text-[18px] hover:underline flex flex-row items-center justify-center gap-1"
         >
@@ -95,6 +95,7 @@ const QuestCard: React.FC<QuestProps> = ({
       >
         {submission && (
           <Link
+          target="_blank"
             href={submission}
             className="hover:underline font-bold w-full text-start"
           >
@@ -102,6 +103,7 @@ const QuestCard: React.FC<QuestProps> = ({
           </Link>
         )}
         <Link
+        target="_blank"
           href="https://www.ao.link/entity/BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
           className={` tracking-tighter xl:text-[18px] lg:text-[12px] md:text-[10.5px] font-bold w-full text-right hover:underline`}
         >
