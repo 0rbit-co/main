@@ -34,12 +34,12 @@ const QuestsPage = () => {
         className="pb-6 font-medium tracking-wide text-center md:px-0 px-3
       xl:text-[24px] xl:leading-[27px] md:text-[18px] md:leading-[21px] text-[18px] leading-[21px]"
       >
-        <span className={`font-[Medium] tracking-wide`}>0rbit</span> quests are
+        <span className={`font-jetbrains tracking-wide`}>0rbit</span> quests are
         challenges that will help you learn about
         <br />
-        <span className={`font-[Medium] tracking-wide`}>0rbit</span> and ao and
+        <span className={`font-jetbrains tracking-wide`}>0rbit</span> and ao and
         earn some{" "}
-        <span className={`${brandSecondaryText} font-[Regular] tracking-wide`}>
+        <span className={`${brandSecondaryText} font-jetbrains tracking-wide`}>
           $0RBT
         </span>{" "}
         along the way.{" "}

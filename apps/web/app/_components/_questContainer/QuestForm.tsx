@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import axios from 'axios';
 import llama from "../../../public/quests/llama.svg"
-import llamaSmall from "../../../public/quests/llama-small.svg"
+import llamaSmall from "../../../public/quests/llamaSmall.svg"
 import Image from 'next/image';
 
 const QuestForm: React.FC = () => {
@@ -9,40 +9,45 @@ const QuestForm: React.FC = () => {
     const [walletAddress, setWalletAddress] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
     const [apiResponse, setApiResponse] = useState<any>(null);
-
+  
     const handleTwitterChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setTwitterLink(e.target.value);
+      setTwitterLink(e.target.value);
     };
-
+  
     const handleWalletChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setWalletAddress(e.target.value);
+      setWalletAddress(e.target.value);
     };
-
+  
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        setLoading(true);
-
-        try {
-            const response = await axios.post('http://localhost:3001/save-data', {
-                twitterLink,
-                walletAddress,
-            });
-
-            setApiResponse(response.data.apiResponse);
-
-            setTwitterLink('');
-            setWalletAddress('');
-        } catch (error) {
-            if (axios.isAxiosError(error)) {
-                console.error('Axios error response:', error.response?.data);
-                console.error('Axios error status:', error.response?.status);
-            } else {
-                console.error('An unexpected error occurred:', error);
-            }
+      e.preventDefault();
+      setLoading(true);
+  
+      try {
+        const response = await fetch('http://localhost:4000/save-data', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            twitterLink,
+            walletAddress,
+          }),
+        });
+  
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
         }
-        finally {
-            setLoading(false);
-        }
+  
+        const data = await response.json();
+        setApiResponse(data.apiResponse);
+  
+        setTwitterLink('');
+        setWalletAddress('');
+      } catch (error) {
+        console.error('An unexpected error occurred:', error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     return (
@@ -78,7 +83,7 @@ const QuestForm: React.FC = () => {
                     </div>
                     <button
                         type="submit"
-                        className="w-[82px] px-2 py-0.5 bg-[#45512a] cursor-pointer hover:scale-95 transition-all rounded border border-[#e1e3e6] text-white"
+                        className="min-w-24 max-w-28 px-2 py-0.5 bg-[#45512a] cursor-pointer hover:scale-95 transition-all rounded border border-[#e1e3e6] text-white"
                         disabled={loading || !twitterLink || !walletAddress}
                     >
                         {loading ? 'Submitting...' : 'Submit'}
@@ -89,12 +94,12 @@ const QuestForm: React.FC = () => {
 
             </form>
 
-            {apiResponse && (
+            {/* {apiResponse && (
                 <div className="mt-6 bg-gray-100 p-4 rounded">
                     <h3 className="text-lg mb-2">API Response:</h3>
                     <pre className="whitespace-pre-wrap">{JSON.stringify(apiResponse, null, 2)}</pre>
                 </div>
-            )}
+            )} */}
         </div>
     );
 };
