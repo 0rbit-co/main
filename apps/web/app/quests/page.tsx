@@ -5,6 +5,7 @@ import { QuestCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
 import { completedQuests, quests } from "../_utils/quests";
 import Nav from "../_components/_layout/Nav";
+import QuestForm from "../_components/_questContainer/QuestForm";
 
 const QuestsPage = () => {
   const [activeTab, setActiveTab] = useState("active");
@@ -78,7 +79,10 @@ const QuestsPage = () => {
             //     //   last={key + 1 === quests.length && quests.length % 2 !== 0}
             //     // />
             //   );
-            <div className="text-oliveGreen text-center">No ongoing quests at the moment—please check back later for new quests!</div>
+            // <div className="text-oliveGreen text-center">No ongoing quests at the moment—please check back later for new quests!</div>
+            <div>
+              <QuestForm />
+            </div>
           }
           {activeTab === "completed" &&
             completedQuests.map((quest, key) => {
