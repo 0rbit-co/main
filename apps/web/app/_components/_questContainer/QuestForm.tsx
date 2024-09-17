@@ -1,15 +1,20 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
-import llama from "../../../public/quests/llama.svg"
-import llamaSmall from "../../../public/quests/llamaSmall.svg"
+import { useState, ChangeEvent, FormEvent, useEffect } from 'react';
+import llama from "../../../public/quests/llama.svg";
+import llamaSmall from "../../../public/quests/llamaSmall.svg";
 import Image from 'next/image';
+import { BsArrowUpRight } from "react-icons/bs";
 
 const QuestForm: React.FC = () => {
   const [twitterLink, setTwitterLink] = useState<string>('');
   const [walletAddress, setWalletAddress] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [apiResponse, setApiResponse] = useState<any>(null);
+  const [processId, setProcessId] = useState<string | null>(null); 
+  const [notification, setNotification] = useState<string | null>(null); 
+  const [countdown, setCountdown] = useState<number | null>(null); 
 
   const SERVER_URL = 'https://test-w9xq.onrender.com/save-data';
+  // const SERVER_URL = 'http://localhost:4000/save-data';
 
   const handleTwitterChange = (e: ChangeEvent<HTMLInputElement>) => {
     setTwitterLink(e.target.value);
@@ -22,6 +27,8 @@ const QuestForm: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setNotification('sec');
+    setCountdown(45);
 
     try {
       const response = await fetch(SERVER_URL, {
@@ -41,15 +48,33 @@ const QuestForm: React.FC = () => {
 
       const data = await response.json();
       setApiResponse(data.apiResponse);
+      setProcessId(data.processId);
 
       setTwitterLink('');
       setWalletAddress('');
     } catch (error) {
       console.error('An unexpected error occurred:', error);
+      setNotification('Error submitting the data.');
     } finally {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout | null = null;
+
+    if (countdown && countdown > 0) {
+      timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+    }
+
+    if (countdown === 0) {
+      setNotification(null);
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [countdown]);
 
   return (
     <div className="">
@@ -87,20 +112,29 @@ const QuestForm: React.FC = () => {
             className="min-w-24 max-w-28 px-2 py-0.5 bg-[#45512a] cursor-pointer hover:scale-95 transition-all rounded border border-[#e1e3e6] text-white"
             disabled={loading || !twitterLink || !walletAddress}
           >
-            {loading ? 'Submitting...' : 'Submit'}
+            {loading ? <div className='flex items-center justify-center gap-2'>
+              {countdown !== null && <span className="">{countdown}</span>}
+              {notification}
+            </div> : 'Submit'}
           </button>
         </div>
         <Image src={llamaSmall} className='absolute bottom-0 right-0 lg:hidden' alt='llama' />
         <Image src={llama} className='absolute bottom-0 right-0 hidden lg:flex' alt='llama' />
-
       </form>
 
-      {/* {apiResponse && (
-                <div className="mt-6 bg-gray-100 p-4 rounded">
-                    <h3 className="text-lg mb-2">API Response:</h3>
-                    <pre className="whitespace-pre-wrap">{JSON.stringify(apiResponse, null, 2)}</pre>
-                </div>
-            )} */}
+      {processId && (
+        <div className="fixed z-20 bottom-4 right-4 bg-[#45512a] text-[#e4e6dd] p-4 rounded shadow-lg">
+          <p>Process created successfully!</p>
+          <a
+            href={`https://bazar.arweave.net/#/asset/${processId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline flex items-center gap-1"
+          >
+            View Atomic Asset <BsArrowUpRight />
+          </a>
+        </div>
+      )}
     </div>
   );
 };
