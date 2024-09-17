@@ -29,7 +29,7 @@ touch 0rbit-Price-Feed.lua
 local json = require("json")
 
 _0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"
-_0RBT_TOKEN = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
+_0RBT_POINTS = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
 
 BASE_URL = "https://api.coingecko.com/api/v3/simple/price"
 FEE_AMOUNT = "1000000000000" -- 1 $0RBT
@@ -40,7 +40,7 @@ Breakdown of the above code:
 | --- | --- |
 | `json` | The module required to destruct the stringified JSON data. <br/> In this case, you interact with an API (api.coingecko.com) to fetch cryptocurrency prices. The data returned by this API is typically in JSON format. Therefore, you must parse this JSON data to extract the required information. |
 | `_0RBIT` | The processId of the 0rbit process. |
-| `_0RBT_TOKEN` | The processId of the $0RBT process. |
+| `_0RBT_POINTS` | The processId of the $0RBT process. |
 | `BASE_URL` | The API URL you want to fetch data from. In this case, we are fetching cryptocurrency prices from the CoinGecko API. |
 | `FEE_AMOUNT` | The amount of $0RBT you want to send to the 0rbit process for the request. |
 
@@ -103,7 +103,7 @@ function fetchPrice()
     url = BASE_URL .. "?ids=" .. token_ids .. "&vs_currencies=usd"
 
     Send({
-        Target = _0RBT_TOKEN,
+        Target = _0RBT_POINTS,
         Action = "Transfer",
         Recipient = _0RBIT,
         Quantity = FEE_AMOUNT,
