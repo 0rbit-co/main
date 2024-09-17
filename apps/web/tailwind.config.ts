@@ -8,6 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        raleway: ['Raleway', 'sans-serif'],
+        jetbrains: ['"JetBrains Mono"', 'monospace'],
+      },
+      boxShadow: {
+        'inner-strong': 'inset 0px 2px 10px rgba(0, 0, 0, 0.1)',
+      },
       screens: {
         xxs: "420px",
         xs: "500px",

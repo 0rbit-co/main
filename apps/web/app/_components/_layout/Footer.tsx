@@ -34,37 +34,36 @@ const Footer = () => {
       className={`flex flex-col md:flex-row gap-1 md:gap-3 md:items-center items-center justify-between bottom-0 
        py-[12px] md:px-[30px] px-[9px] w-[100vw] max-w-[1800px]
        border-t-[1.2px] border-[#000000]
-   ${
-     path == "/quests"
-       ? "lg:absolute "
-       : `${path == "/team" ? "lg:absolute " : ""}`
-   }
+   ${path == "/quests"
+          ? "lg:absolute "
+          : `${path == "/team" ? "lg:absolute " : ""}`
+        }
  `}
     >
       <div className="flex flex-col lg:flex-row items-center justify-center md:justify-end md:items-end md:gap-[9px]">
-          <Image
-            width={60}
-            height={60}
-            src="/logos/recLight.svg"
-            alt="logo"
-            className="md:block hidden"
-          />
-          <Image
-            width={90}
-            height={90}
-            src="/logos/recLight.svg"
-            alt="logo"
-            className="md:hidden w-[60px]"
-          />
-          <h4
-            className={`${brandSecondaryText} md:text-[12px] text-[10px] font-semibold tracking-tighter font-[Regular] pb-[3px]`}
-          >
-            &copy; 2024 0rbit
-          </h4>
+        <Image
+          width={60}
+          height={60}
+          src="/logos/recLight.svg"
+          alt="logo"
+          className="md:block hidden"
+        />
+        <Image
+          width={90}
+          height={90}
+          src="/logos/recLight.svg"
+          alt="logo"
+          className="md:hidden w-[60px]"
+        />
+        <h4
+          className={`${brandSecondaryText} md:text-[12px] text-[10px] font-semibold tracking-tighter font-jetbrains pb-[3px]`}
+        >
+          &copy; 2024 0rbit
+        </h4>
       </div>
       <div className="flex md:hidden flex-row md:gap-6 gap-5 items-center justify-center mt-1 md:mt-0">
         <Link
-        target="_blank"
+          target="_blank"
           href="https://twitter.com/0rbitco"
           onClick={() => handleLinkClick("Twitter", 1)}
         >
@@ -73,7 +72,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-        target="_blank"
+          target="_blank"
           href="https://discord.gg/JVSjqaKJgV"
           onClick={() => handleLinkClick("Discord", 2)}
         >
@@ -82,7 +81,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-        target="_blank"
+          target="_blank"
           href="https://github.com/0rbit-co"
           onClick={() => handleLinkClick("GitHub", 3)}
         >
@@ -97,7 +96,7 @@ const Footer = () => {
       md:text-[15px] text-[12px]"
         >
           <Link
-          target="_blank"
+            target="_blank"
             href="https://docs.0rbit.co/"
             className={`flex flex-row gap-[3px] text-md hover:text-[#EB8F44] hover:tracking-wider hover:underline`}
             onClick={() => handleLinkClick("Docs", 4)}
@@ -106,7 +105,7 @@ const Footer = () => {
             <Image width={8} height={8} src={arrDark} alt="arrow" />
           </Link>
           <Link
-          target="_blank"
+            target="_blank"
             href="https://playground.0rbit.co/"
             className={`flex flex-row gap-[3px] text-md hover:text-[#EB8F44] hover:tracking-wider hover:underline`}
             onClick={() => handleLinkClick("Playground", 5)}
@@ -142,7 +141,7 @@ const Footer = () => {
       </div>
       <div className="md:flex hidden flex-row md:gap-6 gap-[6px] items-center justify-center">
         <Link
-        target="_blank"
+          target="_blank"
           href="https://twitter.com/0rbitco"
           onClick={() => handleLinkClick("Twitter", 9)}
         >
@@ -151,7 +150,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-        target="_blank"
+          target="_blank"
           href="https://discord.gg/JVSjqaKJgV"
           onClick={() => handleLinkClick("Discord", 10)}
         >
@@ -160,7 +159,7 @@ const Footer = () => {
           />
         </Link>
         <Link
-        target="_blank"
+          target="_blank"
           href="https://github.com/0rbit-co"
           onClick={() => handleLinkClick("GitHub", 11)}
         >

@@ -5,6 +5,7 @@ import { QuestCard } from "../_components";
 import { brandDarkText, brandSecondaryText } from "../_utils/colors";
 import { completedQuests, quests } from "../_utils/quests";
 import Nav from "../_components/_layout/Nav";
+import QuestForm from "../_components/_questContainer/QuestForm";
 
 const QuestsPage = () => {
   const [activeTab, setActiveTab] = useState("active");
@@ -33,12 +34,12 @@ const QuestsPage = () => {
         className="pb-6 font-medium tracking-wide text-center md:px-0 px-3
       xl:text-[24px] xl:leading-[27px] md:text-[18px] md:leading-[21px] text-[18px] leading-[21px]"
       >
-        <span className={`font-[Medium] tracking-wide`}>0rbit</span> quests are
+        <span className={`font-jetbrains tracking-wide`}>0rbit</span> quests are
         challenges that will help you learn about
         <br />
-        <span className={`font-[Medium] tracking-wide`}>0rbit</span> and ao and
+        <span className={`font-jetbrains tracking-wide`}>0rbit</span> and ao and
         earn some{" "}
-        <span className={`${brandSecondaryText} font-[Regular] tracking-wide`}>
+        <span className={`${brandSecondaryText} font-jetbrains tracking-wide`}>
           $0RBT
         </span>{" "}
         along the way.{" "}
@@ -78,7 +79,10 @@ const QuestsPage = () => {
             //     //   last={key + 1 === quests.length && quests.length % 2 !== 0}
             //     // />
             //   );
-            <div className="text-oliveGreen text-center">No ongoing quests at the moment—please check back later for new quests!</div>
+            // <div className="text-oliveGreen text-center">No ongoing quests at the moment—please check back later for new quests!</div>
+            <div>
+              <QuestForm />
+            </div>
           }
           {activeTab === "completed" &&
             completedQuests.map((quest, key) => {
