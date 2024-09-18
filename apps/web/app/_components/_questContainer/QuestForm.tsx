@@ -9,9 +9,9 @@ const QuestForm: React.FC = () => {
   const [walletAddress, setWalletAddress] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [apiResponse, setApiResponse] = useState<any>(null);
-  const [processId, setProcessId] = useState<string | null>(null); 
-  const [notification, setNotification] = useState<string | null>(null); 
-  const [countdown, setCountdown] = useState<number | null>(null); 
+  const [processId, setProcessId] = useState<string | null>(null);
+  const [notification, setNotification] = useState<string | null>(null);
+  const [countdown, setCountdown] = useState<number | null>(null);
 
   const SERVER_URL = 'https://test-w9xq.onrender.com/save-data';
   // const SERVER_URL = 'http://localhost:4000/save-data';
@@ -78,9 +78,15 @@ const QuestForm: React.FC = () => {
 
   return (
     <div className="">
-      <form onSubmit={handleSubmit} className="lg:w-[791px] h-[450px] relative lg:h-[361px] bg-[#e4e6dd] rounded-xl shadow-inner-strong p-8">
+      <form onSubmit={handleSubmit} className="lg:w-[791px] h-[540px] relative lg:h-[400px] bg-[#e4e6dd] rounded-xl shadow-inner-strong p-8">
         <div className="lg:text-3xl font-bold font-raleway lg:leading-[28.91px] lg:tracking-widest h-[42.13px] text-[#45512a] text-2xl capitalize leading-tight tracking-wider">Submit your Mascot ideas now !!</div>
         <div className="w-full h-[0px] border border-[#45512a]/40 mb-4 mt-10 lg:mt-0"></div>
+        <div>
+          <ul className="list-disc pl-5 font-semibold text-[#45512A] pb-4">
+            <li>Top 5 engaging tweets will receive <span className='text-[#D16D1B] font-jetbrains'>1000 $ORBT</span> Points each.</li>
+            <li>Rest of the participants will share a pool of <span className='text-[#D16D1B] font-jetbrains'>3000 $ORBT</span> Points.</li>
+          </ul>
+        </div>
         <div className='flex flex-col gap-10'>
           <div className='flex flex-col gap-3'>
             <div className="flex flex-col gap-2">
