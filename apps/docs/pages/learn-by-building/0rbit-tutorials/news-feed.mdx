@@ -28,7 +28,7 @@ touch 0rbit-News-Feed.lua
 local json = require("json")
 
 _0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"
-_0RBT_TOKEN = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
+_0RBT_POINTS = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
 
 URL = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
 FEE_AMOUNT = "1000000000000" -- 1 $0RBT
@@ -40,7 +40,7 @@ Breakdown of the above code:
 | --- | --- |
 | `json` | The module required to destruct the stringified JSON data. |
 | `_0RBIT` | The processId of the 0rbit process. |
-| `_0RBT_TOKEN` | The processId of the $0RBT process. |
+| `_0RBT_POINTS` | The processId of the $0RBT process. |
 | `URL` | The API URL you want to fetch data from. |
 | `FEE_AMOUNT` | The amount of $0RBT you want to send to the 0rbit process for the request. |
 | `NEWS` | The table to store the news data. |
@@ -58,7 +58,7 @@ The `fetchNews` function fetches the news from the `URL` using 0rbit's `Get-Real
 ```lua
 function fetchNews()
     Send({
-        Target = _0RBT_TOKEN,
+        Target = _0RBT_POINTS,
         Action = "Transfer",
         Recipient = _0RBIT,
         Quantity = FEE_AMOUNT,
