@@ -78,9 +78,9 @@ const QuestCard: React.FC<QuestProps> = ({
           className="text-[18px] hover:underline flex flex-row items-center justify-center gap-1"
         >
           <div
-            className={` ${brandSecondaryText} text-center xl:text-[15px] md:text-[12px] text-[10.5px] font-semibold`}
+            className={`font-raleway text-center xl:text-[15px] md:text-[12px] text-[10.5px] font-semibold`}
           >
-            Check out the Repo
+            Check it out here!
           </div>
           <Image
             width={8}
@@ -97,7 +97,7 @@ const QuestCard: React.FC<QuestProps> = ({
           <Link
           target="_blank"
             href={submission}
-            className="hover:underline font-bold w-full text-start"
+            className="hover:underline font-raleway w-full text-start"
           >
             Submit PR
           </Link>
@@ -105,7 +105,7 @@ const QuestCard: React.FC<QuestProps> = ({
         <Link
         target="_blank"
           href="https://www.ao.link/entity/BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
-          className={` tracking-tighter xl:text-[18px] lg:text-[12px] md:text-[10.5px] font-bold w-full text-right hover:underline`}
+          className={` tracking-tighter xl:text-[18px] lg:text-[12px] md:text-[10.5px] w-full text-right hover:underline font-jetbrains`}
         >
           +{pts} $0RBT
         </Link>
