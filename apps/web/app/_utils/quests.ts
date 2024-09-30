@@ -38,4 +38,13 @@ export const completedQuests = [
     submission: "",
     pts: "50",
   },
+  {
+    id: 4,
+    qname: "Mascot Quest",
+    imag: "mascot",
+    info: "Suggest a Mascot that fits 0rbit and  claim your atomic asset",
+    repo: "https://x.com/0rbitco/status/1836707672005251339",
+    submission: "",
+    pts: "8000",
+  },
 ];
