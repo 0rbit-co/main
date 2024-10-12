@@ -54,7 +54,7 @@ const VideoContainer = () => {
        text-[18px] leading-[30px] gap-3"
         >
           <h3>KNOW</h3>
-          <h3 className={`${brandSecondaryText} font-[Medium]`}>0RBIT</h3>
+          <h3 className={`font-jetbrains ${brandSecondaryText}`}>0RBIT</h3>
           <h3>BETTER</h3>
         </div>
         <iframe
@@ -88,7 +88,7 @@ const VideoContainer = () => {
        `}
         >
           <h3>KNOW</h3>
-          <h3 className={`${brandSecondaryText} font-[Regular]`}>0RBIT</h3>
+          <h3 className={`${brandSecondaryText} font-jetbrains`}>0RBIT</h3>
           <h3>BETTER</h3>
         </div>
         <div

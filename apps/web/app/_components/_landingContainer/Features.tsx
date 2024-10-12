@@ -93,7 +93,7 @@ const Features = () => {
             md:text-[12px] md:leading-[15px] 
             text-[9px] leading-[12px]`}
           >
-            Anyone can utilise <span className="font-[Regular]">0rbit</span>{" "}
+            Anyone can utilise <span className="font-jetbrains">0rbit</span>{" "}
             without asking permission from the team.
           </p>
         </div>
@@ -124,7 +124,7 @@ const Features = () => {
             md:text-[12px] md:leading-[15px] md:tracking-[1.5px]
             text-[9px] leading-[10.5px] tracking-[0.6px]`}
           >
-            The <span className="font-[Regular] tracking-tight">0rbit</span>{" "}
+            The <span className="font-jetbrains tracking-tight">0rbit</span>{" "}
             nodes secure and provide accurate data by following consensus.
           </p>
         </div>
@@ -155,7 +155,7 @@ const Features = () => {
             md:text-[12px] md:leading-[15px] 
             text-[9px] leading-[10.5px] tracking-[0.6px]`}
           >
-            <span className="font-[Regular]">0rbit</span> provides secure path
+            <span className="font-jetbrains">0rbit</span> provides secure path
             to get the data in any AO process.
           </p>
         </div>
