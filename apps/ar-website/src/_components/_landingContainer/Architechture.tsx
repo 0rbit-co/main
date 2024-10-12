@@ -68,23 +68,23 @@ const Architechture = () => {
         lg:text-[21px] lg:leading-[27px] font-medium  text-left `}
         >
           <h3 className="pt-[24px]">
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             provides any data from the web to an ao process <br />
             by utilizing the power of ao, and{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             nodes.
           </h3>
           <h3 className="pt-[24px]">
             The user sends a message to the{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             ao,{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             nodes fetches the data and the user process receives the data.
@@ -99,23 +99,23 @@ const Architechture = () => {
         text-[15px] leading-[18px] text-center font-semibold `}
         >
           <h3 className="pt-[24px] max-w-[225px]">
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             provides any data from the web to an ao process by utilizing the
             power of ao, and{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             nodes.
           </h3>
           <h3 className="pt-[24px] max-w-[240px]">
             The user sends a message to the{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             ao,{" "}
-            <span className={`font-[Regular] ${brandSecondaryText}`}>
+            <span className={`font-jetbrains ${brandSecondaryText}`}>
               0rbit
             </span>{" "}
             nodes fetch the data and the user process receives the data.
