@@ -10,7 +10,7 @@ export const blogData = [
     image: dice,
     title: "Dice Game",
     description:
-      "Guide to generate a random function using 0rbit",
+      "Guide to generate a off-chain random number using 0rbit",
     link: "https://blog.0rbit.co/dice-game-with-0rbit",
   },
   {
