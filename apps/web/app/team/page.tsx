@@ -56,13 +56,13 @@ const TeamPage = () => {
           info="Designer"
           last={false}
         />
-        <TeamCard
+{/*         <TeamCard
           pname="sarthak"
           github="https://github.com/Not-Sarthak"
           twitter="https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09"
           info="Frontend Developer"
           last={true}
-        />
+        /> */}
       </div>
       <div
         className=" 
@@ -92,12 +92,12 @@ const TeamPage = () => {
           info="Backend and Infrastructure"
           last={false}
         />
-        <TeamCard
+{/*         <TeamCard
           pname="sarthak"
           github="https://github.com/Not-Sarthak"
           twitter="https://x.com/0xSarthak13?t=nvsUz9hxhq2hQO25wr8Rtw&s=09"
           info="Frontend Developer"
-          last={true}
+          last={true} */}
         />
       </div>
     </main>
