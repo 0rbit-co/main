@@ -6,7 +6,7 @@ import { brandDarkText, brandSecondaryText } from "../../_utils/colors";
 import { FaTwitter } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { FaDiscord } from "react-icons/fa";
-import arrDark from "@/public/icons/linkArrow.svg";
+import arrDark from "../../../public/icons/linkArrow.svg";
 import { usePathname } from "next/navigation";
 
 const event = ({ action, category, label, value }: any) => {
@@ -58,7 +58,7 @@ const Footer = () => {
         <h4
           className={`${brandSecondaryText} md:text-[12px] text-[10px] font-semibold tracking-tighter font-jetbrains pb-[3px]`}
         >
-          &copy; 2024 0rbit
+          &copy; 2025 0rbit
         </h4>
       </div>
       <div className="flex md:hidden flex-row md:gap-6 gap-5 items-center justify-center mt-1 md:mt-0">
