@@ -57,7 +57,7 @@ const Footer = () => {
           <h4
             className={`${brandSecondaryText} md:text-[12px] text-[10px] font-semibold tracking-tighter font-[Regular] pb-[3px]`}
           >
-            &copy; 2024 0rbit
+            &copy; 2025 0rbit
           </h4>
       </a>
       <div className="flex md:hidden flex-row md:gap-6 gap-5 items-center justify-center mt-1 md:mt-0">

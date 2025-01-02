@@ -29,7 +29,7 @@ const Footer = () => {
         <h3
           className={`${brandSecondaryText} sm:text-[18px] text-[12px] font-[Regular]`}
         >
-          &copy; 2024 <span className="">0rbit</span>
+          &copy; 2025 <span className="">0rbit</span>
         </h3>
         <div className="flex flex-row sm:gap-6 gap-[12px] items-center justify-center">
           <Link
