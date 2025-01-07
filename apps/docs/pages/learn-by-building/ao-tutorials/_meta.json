@@ -1,4 +1,7 @@
 {
     "token": "Token",
-    "swapping": "Swapping"
+    "swapping": {
+        "title": "Swapping",
+        "display": "hidden"
+    }
 }

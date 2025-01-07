@@ -29,7 +29,7 @@ To interact with 0rbit there are types of handlers:
 
 Since the 0rbit process forwards the data it receives from the 0rbit Nodes, it best to have a defined handler in your process to receive the data.
 
-`Receive-Response` is the Handler name the 0rbit process will call to send the data back to the `ao` process. 
+`Receive-Response` is the `Action` value the 0rbit process will send the data back to the `ao` process. 
 
-You can create a simple handler in your process and use `msg.Data` to check the data received from the 0rbit process.
+You can create a simple handler in your process and use `msg.Data` to check the data received from the 0rbit.
 

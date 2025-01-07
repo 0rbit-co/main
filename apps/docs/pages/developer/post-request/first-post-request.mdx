@@ -32,23 +32,18 @@ _0RBIT = "BaMK1dfayo75s3q1ow6AO64UDpD9SEFbeE8xYrY2fyQ"
 _0RBT_POINTS = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
 
 FEE_AMOUNT = "1000000000000" -- 1 $0RBT
-BASE_URL = "https://arweave.dev/graphql"
+BASE_URL = "https://httpbin.org/post"
+data = {
+    "id": 1001,
+    "name": "geek",
+    "passion": "coding",
+}
 -- The data body to be sent in the POST request
-BODY = json.encode({
-    query = [[
-        query {
-            transactions(
-                owners: ["vh-NTHVvlKZqRxc8LyyTNok65yQ55a_PJ1zWLb9G2JI"]
-            ) {
-                edges {
-                    node {
-                        id
-                    }
-                }
-            }
-        }
-    ]]
-});
+BODY = json.encode(data);
+
+HEADERS = json.encode({
+    ["Content-Type"]: "application/json;charset=utf-8"
+})
 
 ReceivedData = ReceivedData or {}
 ``` 
@@ -69,7 +64,8 @@ Handlers.add(
             Quantity = FEE_AMOUNT,
             ["X-Url"] = BASE_URL,
             ["X-Action"] = "Post-Real-Data",
-            ["X-Body"] = BODY
+            ["X-Body"] = BODY,
+            ["X-Headers"] = HEADERS
         })
         print(Colors.green .. "You have sent a POST Request to the 0rbit process.")
     end
@@ -91,6 +87,7 @@ Breakdown of the above code:
     | ["X-Url"] | The _forwarded-tag_ which contains the URL and the same will be used by the __0rbit process__ to fetch the data. |
     | ["X-Action"] | The _forwarded-tag_ which contains the action to be performed by the __0rbit process__. In this case, it's __Post-Real-Data__. |
     | ["X-Body"] | The _forwarded-tag_ which contains the data body to be sent in the POST request. |
+    | ["X-Headers"] | The _forwarded-tag_ which contains the headers to be sent in the POST request. |
 
 ### Receive Data
 
