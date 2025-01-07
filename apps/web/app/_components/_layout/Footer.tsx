@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { brandDarkText, brandSecondaryText } from "../../_utils/colors";
-import { FaTwitter } from "react-icons/fa";
+import { FaTwitter, FaDiscord, FaYoutube } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
-import { FaDiscord } from "react-icons/fa";
 import arrDark from "../../../public/icons/linkArrow.svg";
 import { usePathname } from "next/navigation";
 
@@ -89,6 +88,15 @@ const Footer = () => {
             className={`${brandDarkText} hover:opacity-75 md:w-6 md:h-6 w-[20px] h-[20px]`}
           />
         </Link>
+        <Link
+          target="_blank"
+          href="https://www.youtube.com/@only0rbitco"
+          onClick={() => handleLinkClick("YouTube", 3)}
+        >
+          <FaYoutube
+            className={`${brandDarkText} hover:opacity-75 md:w-6 md:h-6 w-[20px] h-[20px]`}
+          />
+        </Link>
       </div>
       <div className="flex flex-col justify-center items-center gap-1">
         <div
@@ -165,6 +173,15 @@ const Footer = () => {
         >
           <TbBrandGithubFilled
             className={`${brandDarkText} hover:opacity-75 md:w-6 md:h-6 w-[15px] h-[15px]`}
+          />
+        </Link>
+        <Link
+          target="_blank"
+          href="https://www.youtube.com/@only0rbitco"
+          onClick={() => handleLinkClick("YouTube", 3)}
+        >
+          <FaYoutube
+            className={`${brandDarkText} hover:opacity-75 md:w-6 md:h-6 w-[20px] h-[20px]`}
           />
         </Link>
       </div>
