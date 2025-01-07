@@ -9,11 +9,11 @@ import {
 import "../../_styles/anims.css";
 
 const Stats: React.FC = () => {
-  const [counter, setCounter] = useState<number>(250000);
+  const [counter, setCounter] = useState<number>(315000);
   useEffect(() => {
     const fetchCounter = async () => {
       setTimeout(() => {
-        setCounter(250000);
+        setCounter(315000);
       }, 1000);
     };
 
@@ -48,14 +48,12 @@ const Stats: React.FC = () => {
     <section className="flex flex-col items-center justify-center gap-3 max-w-[1800px] w-[100vw]">
       <div
         ref={lhsRef}
-        className={`${
-          isVisible ? "statLine" : "w-0"
-        } self-start md:py-[3px] py-[1.5px] ${brandSecondaryBg}`}
+        className={`${isVisible ? "statLine" : "w-0"
+          } self-start md:py-[3px] py-[1.5px] ${brandSecondaryBg}`}
       ></div>
       <div
-        className={`${
-          isVisible ? "fadeInStatScroll " : " opacity-0 "
-        } flex flex-row items-center justify-center 
+        className={`${isVisible ? "fadeInStatScroll " : " opacity-0 "
+          } flex flex-row items-center justify-center 
       xl:gap-9
       gap-[9px]`}
       >
@@ -90,9 +88,8 @@ const Stats: React.FC = () => {
         </h4>
       </div>
       <div
-        className={`${
-          isVisible ? "statLine" : "w-0"
-        } self-end md:py-[3px] py-[1.5px] ${brandSecondaryBg}`}
+        className={`${isVisible ? "statLine" : "w-0"
+          } self-end md:py-[3px] py-[1.5px] ${brandSecondaryBg}`}
       ></div>
     </section>
   );
