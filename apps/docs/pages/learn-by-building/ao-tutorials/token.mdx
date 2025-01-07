@@ -162,7 +162,7 @@ Here,
 - The name of the Handler is `info`.
 - Within the `Handlers.utils` module, there's a helpful function called **`hasMatchingTag(name, value)`** which returns a function that requires a message argument. These function compares the Tag Name and Value, if they are equal then it invokes the handle function.
   Let's shed some light on what's happening behind the scenes:
-  - When you send a message to the token process, like **`Send({ Target = ao.id, Action = “Info”})`**, it's like dropping a reuest into a mailbox.
+  - When you send a message to the token process, like **`Send({ Target = ao.id, Action = “Info”})`**, it's like dropping a request into a mailbox.
   - This 'mailbox' is our Messenger Unit (MU), which carefully examines the message content. If it sees the keyword 'Info,' it knows it's time to find the right Handler to deal with it.
   - Now, if the task requires some heavy lifting, like number crunching or data processing, the Messenger Unit isn't equipped for that. So, it passes the message over to the Computation Unit (CU). The CU handles the complex stuff, then sends the result as a **processed message** back to the MU.
 
@@ -362,7 +362,7 @@ After this the next step is to initialize the balances of both the sender and th
 
 #### Understanding the Transfer Execution
 
-Before we initiate the transfer, we make sure to check if the sender has enough balance to cover it and if it is true then we update the sender’s and receipient’s balances accordingly.
+Before we initiate the transfer, we make sure to check if the sender has enough balance to cover it and if it is true then we update the sender’s and recipient's balances accordingly.
 
 After sending, you'll receive a printed message in the terminal similar to `Debit-Notice` on the sender's side and `Credit-Notice` on the recipient's side if the transfer is successful, else you’ll receive a message saying `Transfer-Error`.
 
