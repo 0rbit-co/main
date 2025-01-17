@@ -20,7 +20,7 @@ If you are ready with the above prerequisites,
 Create a new file named `0rbit-Get-Request.lua` in your project directory.
 
 ```bash
-touch 0rbit-Get-Request.lua
+touch Get-Request.lua
 ```
 
 ### Initialize the Variables
@@ -33,8 +33,6 @@ _0RBT_POINTS = "BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc"
 
 FEE_AMOUNT = "1000000000000" -- 1 $0RBT
 BASE_URL = "https://api.diadata.org/v1/assetQuotation/Arweave/0x0000000000000000000000000000000000000000"
-
-ReceivedData = ReceivedData or {}
 ``` 
 
 ### Make the Request
@@ -44,7 +42,6 @@ The following code contains the Handler that will send 1 $0RBT to the `0rbit` pr
 ```lua
 Handlers.add(
     "Get-Request",
-    Handlers.utils.hasMatchingTag("Action", "First-Get-Request"),
     function(msg)
         Send({
             Target = _0RBT_POINTS,
@@ -55,13 +52,17 @@ Handlers.add(
             ["X-Action"] = "Get-Real-Data"
         })
         print(Colors.green .. "You have sent a GET Request to the 0rbit process.")
+
+        local res = Receive({Action = "Receive-Response"})
+        local data = json.decode(res.Data)
+        local price = data.Price
+        print("Price of $AR:" .. price)
     end
 )
 ```
 Breakdown of the above code:
 - `Handlers.add` is used to add a new handler to the `ao` process.
-- __Get-Request__ is the name of the handler.
-- `Handlers.utils.hasMatchingTag` is a function that checks if the incoming message has the matching tag same as the __First-Get-Request__.
+- __Get-Request__ is the name of the handler. It also act as an `Action` tag value by default.
 - `function(msg)` is the function executed when the handler is called.
 - `Send` is the function that takes several tags as the arguments and creates a message on the ao: 
 
@@ -73,29 +74,9 @@ Breakdown of the above code:
     | Quantity | The amount of $0RBT to be sent. |
     | ["X-Url"] | The _forwarded-tag_ which contains the URL and the same will be used by the __0rbit process__ to fetch the data. |
     | ["X-Action"] | The _forwarded-tag_ which contains the action to be performed by the __0rbit process__. In this case, it's __Get-Real-Data__. |
+- `Receive` is use for Lua Coroutinesm, which acts as `await` in aos. So, till a message with `Action = "Receive-Response"` is not received it will not execute the complete code.
+- `json.decode` is used to decode the JSON data received.
 
-### Receive Data
-
-The following code contains the Handler that will receive the data from the `0rbit` process and print it.
-
-```lua
-Handlers.add(
-    "Receive-Data",
-    Handlers.utils.hasMatchingTag("Action", "Receive-Response"),
-    function(msg)
-        local res = json.decode(msg.Data)
-        ReceivedData = res
-        print(Colors.green .. "You have received the data from the 0rbit process.")
-    end
-)
-```
-Breakdown of the above code:
-- `Handlers.add` is used to add a new handler to the `ao` process.
-- __Receive-Data__ is the name of the handler.
-- `Handlers.utils.hasMatchingTag` is a function that checks if the incoming message has the matching tag same as the __Receive-Response__.
-- `function(msg)` is the function executed when the handler is called.
-    - `json.decode` is used to decode the JSON data received.
-    - `ReceivedData = res` stores the received data in the `ReceivedData` variable.
 
 <Callout type="info" emoji="ℹ️">
     The 0rbit process always sends the data in the `string` format. 
@@ -110,7 +91,7 @@ Breakdown of the above code:
 <Steps>
 ### Create a new process and load the script
 ```bash
-aos 0rbitGetRequest --load 0rbit-Get-Request.lua
+aos getRequest --load Get-Request.lua
 ```
 The above command will create a new process with the name __0rbitGetRequest__ and load `0rbit-Get-Request.lua` into it.
 
@@ -119,7 +100,7 @@ The above command will create a new process with the name __0rbitGetRequest__ an
     Call the handler, who will create a request for the 0rbit process.
 
     ```bash
-    Send({ Target= ao.id, Action="First-Get-Request" })
+    Send({ Target= ao.id, Action="Get-Request" })
     ```
     <details>
     <summary>
@@ -128,33 +109,6 @@ The above command will create a new process with the name __0rbitGetRequest__ an
     ![](../../../public/images/developer/get-request/first-get-request.png)
     </details>
 
-### Check the Data
-
-    To check the data stored in the `ReceivedData` variable, run the following command:
-
-    ```bash
-    ReceivedData
-    ```
-
-    <details>
-    <summary>
-    Upon the successful execution, you will receive the JSON data in your terminal:
-    </summary>
-       ```json
-            {
-            Address = "0x0000000000000000000000000000000000000000",
-            Name = "Arweave",
-            Blockchain = "Arweave",
-            Signature = "0x2cd98c6f29a044d732ffcbc1a1b11e6f93f97f760dd1c9e47717ca04cc500afd6d83ad65270b227ddbaeba713e329e31959c814620d8ca136e685565414673d101",
-            Time = "2024-08-14T14:05:59Z",
-            Source = "diadata.org",
-            PriceYesterday = 21.446763148012,
-            Symbol = "AR",
-            Price = 21.404398988798,
-            VolumeYesterdayUSD = 14609998.02428
-            }
-        ```
-    </details>
 
 </Steps>
 

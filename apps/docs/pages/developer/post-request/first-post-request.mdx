@@ -20,7 +20,7 @@ If you are ready with the above prerequisites,
 Create a new file named `0rbit-Post-Request.lua` in your project directory.
 
 ```bash
-touch 0rbit-Post-Request.lua
+touch Post-Request.lua
 ```
 
 ### Initialize the Variables
@@ -55,7 +55,6 @@ The following code contains the Handler that will send 1 $0RBT to the `0rbit` pr
 ```lua
 Handlers.add(
     "Post-Request",
-    Handlers.utils.hasMatchingTag("Action", "First-Post-Request"),
     function(msg)
         Send({
             Target = _0RBT_POINTS,
@@ -68,6 +67,11 @@ Handlers.add(
             ["X-Headers"] = HEADERS
         })
         print(Colors.green .. "You have sent a POST Request to the 0rbit process.")
+
+        local res = Receive({Action = "Receive-Response"})
+        local data = json.decode(res.Data)
+        ReceivedData = data
+        print(Colors.green .. "You have received the data from the 0rbit process.")
     end
 )
 ```
@@ -88,29 +92,9 @@ Breakdown of the above code:
     | ["X-Action"] | The _forwarded-tag_ which contains the action to be performed by the __0rbit process__. In this case, it's __Post-Real-Data__. |
     | ["X-Body"] | The _forwarded-tag_ which contains the data body to be sent in the POST request. |
     | ["X-Headers"] | The _forwarded-tag_ which contains the headers to be sent in the POST request. |
-
-### Receive Data
-
-The following code contains the Handler that will receive the data from the `0rbit` process and print it.
-
-```lua
-Handlers.add(
-    "Receive-Data",
-    Handlers.utils.hasMatchingTag("Action", "Receive-Response"),
-    function(msg)
-        local res = json.decode(msg.Data)
-        ReceivedData = res
-        print(Colors.green .. "You have received the data from the 0rbit process.")
-    end
-)
-```
-Breakdown of the above code:
-- `Handlers.add` is used to add a new handler to the `ao` process.
-- __Receive-Data__ is the name of the handler.
-- `Handlers.utils.hasMatchingTag` is a function that checks if the incoming message has the matching tag same as the __Receive-Response__.
-- `function(msg)` is the function executed when the handler is called.
-    - `json.decode` is used to decode the JSON data received.
-    - `ReceivedData = res` stores the received data in the `ReceivedData` variable.
+- `Receive` is use for Lua Coroutinesm, which acts as `await` in aos. So, till a message with `Action = "Receive-Response"` is not received it will not execute the complete code.
+- `json.decode` is used to decode the JSON data received.
+- `ReceivedData = res` stores the received data in the `ReceivedData` variable.
 
 <Callout type="info" emoji="ℹ️">
     The 0rbit process always sends the data in the `string` format. 
@@ -126,7 +110,7 @@ Breakdown of the above code:
 
 ### Create a new process and load the script
 ```bash
-aos 0rbitPostRequest --load 0rbit-Post-Request.lua
+aos postRequest --load Post-Request.lua
 ```
 The above command will create a new process with the name __0rbitPostRequest__ and load `0rbit-Post-Request.lua` into it.
 
@@ -139,7 +123,7 @@ Transfer some $0RBT to your processID.
     Call the handler, who will create a request for the 0rbit process.
 
     ```bash
-    Send({ Target= ao.id, Action="First-Post-Request" })
+    Send({ Target= ao.id, Action="Post-Request" })
     ```
     <details>
     <summary>
